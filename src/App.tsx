@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
@@ -18,6 +18,8 @@ function App() {
     isScrollingUp: false,
     lastScrollY: 0,
   });
+
+  const childRef = useRef<any>(null);
 
   const handleScroll = () => {
     const { lastScrollY } = state;
