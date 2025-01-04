@@ -4,6 +4,7 @@ import path from "path";
 // https://vi
 // te.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [react()],
   resolve: {
     alias: {
