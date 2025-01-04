@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import MyDocument from "./components/document";
+import MyDocument, { PortfolioRef } from "./components/document";
 
 import { FileDown, Github } from "lucide-react";
 
@@ -19,7 +19,12 @@ function App() {
     lastScrollY: 0,
   });
 
-  const childRef = useRef<any>(null);
+  const childRef = useRef<PortfolioRef>(null);
+  const handlePrint = () => {
+    if (childRef.current) {
+      childRef.current.toPrint();
+    }
+  };
 
   const handleScroll = () => {
     const { lastScrollY } = state;
@@ -39,6 +44,10 @@ function App() {
     };
   }, [state.lastScrollY]);
 
+  useEffect(() => {
+    setState((prev) => ({ ...prev, isScrollingUp: true }));
+  }, []);
+
   return (
     <>
       <main className={styles["main"]}>
@@ -50,7 +59,12 @@ function App() {
         >
           <div className={styles["container"]}>
             <div className={styles["btn-group"]}>
-              <Button variant="outline" size="icon" className="w-7 h-7">
+              <Button
+                onClick={handlePrint}
+                variant="outline"
+                size="icon"
+                className="w-7 h-7"
+              >
                 <FileDown />
               </Button>
               <Button variant="outline" size="icon" className="w-7 h-7">
@@ -60,7 +74,7 @@ function App() {
           </div>
         </header>
         <div className={styles["container"]}>
-          <MyDocument />
+          <MyDocument ref={childRef} />
         </div>
       </main>
     </>

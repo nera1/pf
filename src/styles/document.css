@@ -1,5 +1,3 @@
-.document {
-}
 .canvas {
   color-scheme: light;
   -ms-text-size-adjust: 100%;
@@ -7,13 +5,32 @@
   margin: 0;
   color: #1f2328;
   background-color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
-  padding: 32px;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 64px;
   box-sizing: border-box;
+}
+
+.info > ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 18px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.info > ul label {
+  display: flex;
+  gap: 6px;
+}
+
+.info > ul label > a {
+  font-weight: 700;
+  color: rgb(9 9 11);
 }
 
 .canvas .octicon {
