@@ -67,9 +67,15 @@ function App() {
               >
                 <FileDown />
               </Button>
-              <Button variant="outline" size="icon" className="w-7 h-7">
-                <Github />
-              </Button>
+              <a
+                href="https://github.com/nera1/pf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="icon" className="w-7 h-7">
+                  <Github />
+                </Button>
+              </a>
             </div>
           </div>
         </header>
