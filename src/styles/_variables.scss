@@ -2,3 +2,17 @@ $WIDTH_CONTAINER: 780px;
 $PADDING_ASIDE: 8px;
 
 $HEIGHT_HEADER: 42px;
+
+$breakpoint: $WIDTH_CONTAINER;
+
+@mixin media-sm {
+  @media (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: #{$breakpoint + 1}) {
+    @content;
+  }
+}

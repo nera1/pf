@@ -40,3 +40,13 @@
     justify-content: center;
   }
 }
+
+@include variables.media-sm {
+  .main > .container {
+  }
+}
+
+@include variables.media-lg {
+  .main > .container {
+  }
+}
