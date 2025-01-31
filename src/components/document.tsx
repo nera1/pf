@@ -4,8 +4,6 @@ import {
   useImperativeHandle,
   forwardRef,
   FunctionComponent,
-  useEffect,
-  useState,
 } from "react";
 
 import "../styles/document.css";
