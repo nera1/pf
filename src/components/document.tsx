@@ -20,7 +20,7 @@ export interface LinkTag {
 
 const LinkTag: FunctionComponent<LinkTag> = ({ href, tag, favicon }) => {
   return (
-    <label>
+    <label className="ml-[8px]">
       <img width={20} height={20} src={favicon} />
       <a href={href}>{tag}</a>
     </label>
@@ -41,14 +41,14 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
     <>
       <div className="document">
         <div ref={contentRef} className="canvas">
-          <div className="flex gap-x-10">
+          <h1 className="text-4xl">백엔드 개발자 엄인용</h1>
+          <div className="flex gap-x-[50px] my-[32px]">
             <img
               className="object-cover rounded-full w-[180px] h-[180px]"
               src="https://github.com/shadcn.png"
               alt="nera"
             />
             <div className="flex flex-col justify-center grow info">
-              <p className="text-2xl font-bold">엄인용</p>
               <ul className="text-sm font-medium">
                 <li>
                   <label>
@@ -65,7 +65,7 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
                     Github.
                     <LinkTag
                       href="https://github.com/nera1"
-                      tag="nera"
+                      tag="Nera"
                       favicon="https://github.githubassets.com/favicons/favicon.svg
 "
                     />
@@ -74,7 +74,7 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
                 <li>
                   <label>
                     Email.
-                    <a href="#" onClick={() => false}>
+                    <a href="mailto:ekd594ff@gmail.com" onClick={() => false}>
                       ekd594ff@gmail.com
                     </a>
                   </label>
@@ -90,32 +90,26 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
               </ul>
             </div>
           </div>
-          <h3>Test</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
-          <h1>안녕하세요</h1>
-          <h2>안녕하세요</h2>
-          <h3>안녀어엉</h3>
-          <p>My name is Manu Sporny.</p>
+          <h2>Skills</h2>
+          <ul dir="auto">
+            <li>
+              <label>JAVA</label>
+              <li>
+                객체지향 프로그래밍의 기본 원칙에 충실하고, 람다 표현식 및
+                스트림 API를 사용해 간결하고 효율적인 코드를 작성합니다
+              </li>
+            </li>
+            <li>
+              <label>Spring Boot</label>
+              <li>
+                Spring Boot를 활용하여 REST API를 설계하고 구현할 수 있습니다
+              </li>
+            </li>
+          </ul>
+          <h2>Portfolio</h2>
+          <ul></ul>
+          <h2>Experience</h2>
+          <ul></ul>
         </div>
       </div>
     </>
