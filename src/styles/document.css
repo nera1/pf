@@ -43,11 +43,13 @@
 
 .info > ul label {
   display: flex;
-  gap: 6px;
+  gap: 8px;
+  font-weight: bold;
 }
 
 .info > ul label > a {
   color: rgb(9 9 11);
+  font-weight: lighter;
 }
 
 .canvas .octicon {

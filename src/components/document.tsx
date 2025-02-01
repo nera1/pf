@@ -83,7 +83,7 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
                   <label>
                     Phone.
                     <a href="#" onClick={() => false}>
-                      010.2329.7269
+                      010-2329-7269
                     </a>
                   </label>
                 </li>
