@@ -22,7 +22,9 @@ const LinkTag: FunctionComponent<LinkTag> = ({ href, tag, favicon }) => {
   return (
     <label className="ml-[8px]">
       <img width={20} height={20} src={favicon} />
-      <a href={href}>{tag}</a>
+      <a target="_blank" href={href}>
+        {tag}
+      </a>
     </label>
   );
 };
