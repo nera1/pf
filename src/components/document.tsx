@@ -163,10 +163,14 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
               <label>Sumr</label>
               <ul>
                 <li>
-                  <a href="https://github.com/nera1/sumr">GitHub Repository</a>
+                  <a target="_blank" href="https://github.com/nera1/sumr">
+                    GitHub Repository
+                  </a>
                 </li>
                 <li>
-                  <a href="https://sumr.it">Link</a>
+                  <a target="_blank" href="https://sumr.it">
+                    Link
+                  </a>
                 </li>
                 <li>GitHub Pages로 배포되는 개발 블로그</li>
                 <li>
@@ -181,12 +185,17 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
               <label>Intarea</label>
               <ul>
                 <li>
-                  <a href="https://github.com/ekd594ff/jhta2402_final">
+                  <a
+                    target="_blank"
+                    href="https://github.com/ekd594ff/jhta2402_final"
+                  >
                     GitHub Repository
                   </a>
                 </li>
                 <li>
-                  <a href="https://intarea.store">Link</a>
+                  <a target="_blank" href="https://intarea.store">
+                    Link
+                  </a>
                 </li>
                 <li>인테리어 업체와 소비자를 연결하는 중개플랫폼</li>
                 <li>
