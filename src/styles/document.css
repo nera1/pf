@@ -14,12 +14,23 @@
   padding-left: 48px;
   padding-right: 48px;
   padding-top: 48px;
+  padding-bottom: 48px;
   box-sizing: border-box;
 }
 
 .canvas ul {
   font-weight: normal;
   font-size: 1.0625em;
+}
+
+.canvas ul[dir="auto"] > li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.canvas ul[dir="auto"] > li li {
+  margin-top: 0;
 }
 
 .canvas ul[dir="auto"] > li > label {
@@ -30,6 +41,38 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.canvas ul[dir="auto"] ul {
+  gap: 5px;
+  list-style: disc;
+}
+
+.canvas ul[dir="auto"] ul ul {
+  padding-top: 5px;
+  list-style: circle;
+}
+
+.canvas ul[dir="auto"] .career {
+  display: flex;
+  flex-direction: row;
+}
+
+.canvas ul[dir="auto"] .career > .date {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.canvas ul[dir="auto"] .career > .data {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.canvas .education > li {
+  display: flex;
+  flex-direction: column;
 }
 
 .info > ul {
