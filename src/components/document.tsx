@@ -122,8 +122,8 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
             <li className="career">
               <div className="date">
                 <label>(주)FutureICT</label>
-                <label>2021.04 ~ 2024.02</label>
-                <label>(2년 10개월)</label>
+                <label>2021.12 ~ 2024.03</label>
+                <label>(2년 3개월)</label>
               </div>
               <div className="data">
                 <label>
