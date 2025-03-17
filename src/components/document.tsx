@@ -192,11 +192,6 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
                     GitHub Repository
                   </a>
                 </li>
-                <li>
-                  <a target="_blank" href="https://intarea.store">
-                    Link
-                  </a>
-                </li>
                 <li>인테리어 업체와 소비자를 연결하는 중개플랫폼</li>
                 <li>
                   Spring Boot 활용한 회원 가입 및 인테리어 업체 포트폴리오 작성,
