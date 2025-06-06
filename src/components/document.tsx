@@ -45,11 +45,6 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
         <div ref={contentRef} className="canvas">
           <h1 className="text-4xl">백엔드 개발자 엄인용</h1>
           <div className="flex gap-x-[50px] my-[32px]">
-            <img
-              className="object-cover rounded-full w-[180px] h-[180px]"
-              src="/images/1.png"
-              alt="nera"
-            />
             <div className="flex flex-col justify-center grow info">
               <ul className="text-sm font-medium">
                 <li>
@@ -117,6 +112,7 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
               <label>Git, Docker, Amazon EC2, Amazon RDS</label>
             </li>
           </ul>
+          <br />
           <h2>Experience</h2>
           <ul dir="auto">
             <li className="career">
@@ -156,30 +152,52 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
             </li>
           </ul>
           <br />
+          <br />
           <h2>Portfolio</h2>
           <ul dir="auto">
             <li>
-              <label>2024.04</label>
-              <label>Sumr</label>
+              <label>2025.05 ~</label>
+              <label>api.madness</label>
               <ul>
                 <li>
-                  <a target="_blank" href="https://github.com/nera1/sumr">
-                    GitHub Repository
+                  <a
+                    target="_blank"
+                    href="https://github.com/nera1/api.madness"
+                  >
+                    Backend GitHub Repository
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href="https://sumr.it">
+                  <a target="_blank" href="https://api.madn.es">
                     Link
                   </a>
                 </li>
-                <li>GitHub Pages로 배포되는 개발 블로그</li>
+                <li>Spring Boot 웹소켓 채팅 어플리케이션 백엔드</li>
+                <li>STOMP 프로토콜 기반 채팅 메세지 송수신</li>
+                <li>JWT를 활용한 인증/인가</li>
+                <li>Github Actions을 이용한 CI/CD 파이프라인</li>
+              </ul>
+              <label>madness</label>
+              <ul>
                 <li>
-                  Next.js 의 SSG(Static Site Generation)기능을 활용하여 작성된
-                  마크다운 파일을 블로그 포스트로 변환
+                  <a target="_blank" href="https://github.com/nera1/madness">
+                    Frontend GitHub Repository
+                  </a>
                 </li>
-                <li>Github Actions을 이용한 자동화된 배포 파이프라인 구축</li>
+                <li>
+                  <a target="_blank" href="https://madn.es">
+                    Link
+                  </a>
+                </li>
+                <li>Next.js 기반 웹소켓 채팅 어플리케이션 프론트엔드</li>
+                <li>데스크탑/모바일 기기에 맞춘 반응형 웹</li>
+                <li>
+                  Github Actions, Github Pages를 사용하여 자동화된 정적 웹
+                  페이지 호스팅
+                </li>
               </ul>
             </li>
+            <br />
             <li>
               <label>2024.07 ~ 2024.09</label>
               <label>Intarea</label>
@@ -234,16 +252,28 @@ const MyDocument = forwardRef<PortfolioRef>((_, ref) => {
                 </li>
               </ul>
             </li>
-          </ul>
-          <h2>Education</h2>
-          <ul dir="auto" className="education">
+            <br />
             <li>
-              <label>2013.03 ~ 2020.02</label>
-              건국대학교 컴퓨터공학 학사 졸업
-            </li>
-            <li>
-              <label>2024.03 ~ 2024.09</label>
-              중앙HTA JAVA 백엔드 개발자 교육 수료
+              <label>2024.04</label>
+              <label>Sumr</label>
+              <ul>
+                <li>
+                  <a target="_blank" href="https://github.com/nera1/sumr">
+                    GitHub Repository
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://sumr.it">
+                    Link
+                  </a>
+                </li>
+                <li>GitHub Pages로 배포되는 개발 블로그</li>
+                <li>
+                  Next.js 의 SSG(Static Site Generation)기능을 활용하여 작성된
+                  마크다운 파일을 블로그 포스트로 변환
+                </li>
+                <li>Github Actions을 이용한 자동화된 배포 파이프라인 구축</li>
+              </ul>
             </li>
           </ul>
         </div>
