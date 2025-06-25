@@ -2,9 +2,16 @@ import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import MyDocument, { PortfolioRef } from "./components/document";
-
 import { FileDown, Github } from "lucide-react";
+
+import { Route, Routes } from "react-router-dom";
+
+import { PortfolioRef } from "./components/document";
+import { Navigation } from "./components/navigation";
+
+import Portfolio from "./pages/portfolio";
+import Career from "./pages/career";
+import Introduction from "./pages/introduction";
 
 import styles from "./App.module.scss";
 
@@ -54,10 +61,12 @@ function App() {
         <header
           className={`${styles["header"]} transition-transform duration-300 ${
             state.isScrollingUp ? "translate-y-0" : "-translate-y-full"
-          }
           }`}
         >
           <div className={styles["container"]}>
+            <div className={styles["left"]}>
+              <Navigation />
+            </div>
             <div className={styles["btn-group"]}>
               <Button
                 onClick={handlePrint}
@@ -80,7 +89,15 @@ function App() {
           </div>
         </header>
         <div className={styles["container"]}>
-          <MyDocument ref={childRef} />
+          <Routes>
+            <Route path="/" element={<Introduction reference={childRef} />} />
+            <Route
+              path="/portfolio"
+              element={<Portfolio reference={childRef} />}
+            />
+            <Route path="/career" element={<Career reference={childRef} />} />
+            <Route path="*" element={<Introduction reference={childRef} />} />
+          </Routes>
         </div>
       </main>
     </>

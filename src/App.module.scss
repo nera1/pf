@@ -22,9 +22,12 @@
       max-width: variables.$WIDTH_CONTAINER;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      padding: 0 10px;
-
+      justify-content: space-between;
+      padding: 0 48px;
+      & > .left {
+        display: flex;
+        align-items: center;
+      }
       & > .btn-group {
         display: flex;
         align-items: center;
