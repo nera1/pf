@@ -7,11 +7,11 @@ import { FileDown, Github } from "lucide-react";
 import { Route, Routes } from "react-router-dom";
 
 import { PortfolioRef } from "./components/document";
-import { Navigation } from "./components/navigation";
 
 import Portfolio from "./pages/portfolio";
 import Career from "./pages/career";
 import Introduction from "./pages/introduction";
+import Selector from "./components/selector";
 
 import styles from "./App.module.scss";
 
@@ -65,7 +65,7 @@ function App() {
         >
           <div className={styles["container"]}>
             <div className={styles["left"]}>
-              <Navigation />
+              <Selector />
             </div>
             <div className={styles["btn-group"]}>
               <Button
