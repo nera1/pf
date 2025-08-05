@@ -13,6 +13,8 @@ import Career from "./pages/career";
 import Introduction from "./pages/introduction";
 import Selector from "./components/selector";
 
+import SwingIntroduction from "./pages/swing/portfolio";
+
 import styles from "./App.module.scss";
 
 type AppState = {
@@ -96,7 +98,13 @@ function App() {
               element={<Portfolio reference={childRef} />}
             />
             <Route path="/career" element={<Career reference={childRef} />} />
-            <Route path="*" element={<Introduction reference={childRef} />} />
+            <Route path="/swing">
+              <Route
+                path="introduction"
+                element={<SwingIntroduction ref={childRef} />}
+              />
+            </Route>
+            {/* <Route path="*" element={<Introduction reference={childRef} />} /> */}
           </Routes>
         </div>
       </main>

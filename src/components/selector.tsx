@@ -37,26 +37,14 @@ const Selector: FunctionComponent = () => {
             <SelectItem value="/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
           <SelectGroup>
-            <SelectLabel>더 스윙(~2025.08.31)</SelectLabel>
-            <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem>
-            <SelectItem value="cet">Central European Time (CET)</SelectItem>
-            <SelectItem value="eet">Eastern European Time (EET)</SelectItem>
-            <SelectItem value="west">
-              Western European Summer Time (WEST)
-            </SelectItem>
-            <SelectItem value="cat">Central Africa Time (CAT)</SelectItem>
-            <SelectItem value="eat">East Africa Time (EAT)</SelectItem>
+            <SelectLabel>더 스윙(~2025.08.30)</SelectLabel>
+            <SelectItem value="/swing/introduction">자기소개서</SelectItem>
+            <SelectItem value="/swing/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
           <SelectGroup>
             <SelectLabel>아파트너(~2025.08.31)</SelectLabel>
-            <SelectItem value="msk">Moscow Time (MSK)</SelectItem>
-            <SelectItem value="ist">India Standard Time (IST)</SelectItem>
-            <SelectItem value="cst_china">China Standard Time (CST)</SelectItem>
-            <SelectItem value="jst">Japan Standard Time (JST)</SelectItem>
-            <SelectItem value="kst">Korea Standard Time (KST)</SelectItem>
-            <SelectItem value="ist_indonesia">
-              Indonesia Central Standard Time (WITA)
-            </SelectItem>
+            <SelectItem value="/aptner/introduction">자기소개서</SelectItem>
+            <SelectItem value="/aptner/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>
