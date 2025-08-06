@@ -13,9 +13,10 @@ import Career from "./pages/career";
 import Introduction from "./pages/introduction";
 import Selector from "./components/selector";
 
-import SwingIntroduction from "./pages/swing/portfolio";
+import SwingPortfolio from "./pages/swing/portfolio";
 
 import styles from "./App.module.scss";
+import SwingIntroduction from "./pages/swing/introduction";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -102,6 +103,10 @@ function App() {
               <Route
                 path="introduction"
                 element={<SwingIntroduction ref={childRef} />}
+              />
+              <Route
+                path="portfolio"
+                element={<SwingPortfolio ref={childRef} />}
               />
             </Route>
             {/* <Route path="*" element={<Introduction reference={childRef} />} /> */}
