@@ -17,6 +17,20 @@
   padding-left: 24px;
   padding-right: 24px;
 
+  &.swing-portfolio {
+    h2:not(:first-child) {
+      margin-top: 3rem;
+    }
+  }
+
+  & .project-stack li > span::after {
+    content: ",";
+  }
+
+  & .project-stack li > span:last-child::after {
+    content: "";
+  }
+
   & .badge {
     background-color: #000;
     color: #fff;

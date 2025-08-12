@@ -28,11 +28,17 @@ export const LinkTag: React.FC<LinkTagProps> = ({ href, tag, favicon }) => (
 
 const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
-    <div className={styles["swing-introduction"]}>
-      <h1 className="text-xl m-0">Portfolio</h1>
+    <div
+      className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
+    >
+      <h1 className="text-xl !my-1">Portfolio</h1>
       <section className={`${styles["portfolio"]}`}>
-        <h2 className="text-lg m-0">Madness</h2>
-        <ul>
+        <h2>Madness (실시간 채팅 웹 어플리케이션)</h2>
+        <h3 className="flex gap-x-2 !my-6">
+          <span>1인 개발</span>
+          <span className={styles["badge"]}>2025.05 ~</span>
+        </h3>
+        <ul className="!gap-y-[6px]">
           <li>
             <LinkTag
               href="https://madn.es"
@@ -56,6 +62,54 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
       </section>
+      <h2>Project Stack</h2>
+      <section className={styles["project-stack"]}>
+        <h3 className="text-md">Backend</h3>
+        <ul>
+          <li className="flex gap-x-2">
+            <span>Spring Boot 3.4.2</span>
+            <span>JAVA 17</span>
+          </li>
+          <li className="flex gap-x-2">
+            <span>PostgreSQL 15.8</span>
+            <span>
+              <LinkTag
+                favicon="https://supabase.com/favicon/apple-icon-57x57.png"
+                tag="Supbase(Database hosting)"
+                href="https://supabase.com/"
+              />
+            </span>
+          </li>
+          <li className="flex gap-x-2" aria-atomic>
+            <span>Cloudtype</span>
+            <span>
+              <LinkTag
+                favicon="https://cloudtype.io/favicon.svg"
+                tag="Cloudtype(Backend hosting)"
+                href="https://cloudtype.io/ko/home"
+              />
+            </span>
+          </li>
+          <li className="flex gap-x-2" aria-atomic>
+            <span>GitHub Actions</span>
+          </li>
+        </ul>
+        <h3 className="text-md">Frontend</h3>
+        <ul>
+          <li className="flex gap-x-2">
+            <span>Next.js 15</span>
+            <span>Typescript</span>
+            <span>Sass</span>
+            <span>Tailwind CSS</span>
+            <span>shadcn/ui</span>
+          </li>
+          <li>
+            <span>GitHub Pages(Frontend hosting)</span>
+          </li>
+        </ul>
+      </section>
+      <h2>Project Structure</h2>
+      <section className={styles["feature-development"]}></section>
     </div>
     <div className={styles["swing-introduction"]}>
       <h2>Skills</h2>
@@ -105,26 +159,6 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
           <li>
             건국대학교 컴퓨터공학과 졸업{" "}
             <span className={styles["badge"]}>2020.02</span>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div className={styles["swing-introduction"]}>
-      <h2>Career</h2>
-      <section className={styles["career"]}>
-        <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
-        <span className={styles["badge"]}>2021.12 - 2024.03</span>
-        <ul>
-          <li>
-            IoT 엣지 디바이스인 LTE 라우터에서 송신하는 데이터를 MQTT 프로토콜을
-            통해 수집하고, 이를 Mosquitto 브로커로 받은 뒤 Node-RED로 파싱 및
-            가공해 시계열 데이터베이스인 InfluxDB에 저장하는 일련의 데이터 수집
-            파이프라인을 구성하였습니다
-          </li>
-          <li>
-            등록된 라우터의 데이터만을 수집할 수 있도록 PostgreSQL에 저장된
-            라우터 정보를 Redis에 캐싱하여 MQTT 메세지의 topic과 payload를
-            필터링하는 Node-red 플로우를 제작하였습니다
           </li>
         </ul>
       </section>
