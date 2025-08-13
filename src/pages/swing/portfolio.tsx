@@ -33,11 +33,11 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
     >
       <h1 className="text-xl !my-1">Portfolio</h1>
       <section className={`${styles["portfolio"]}`}>
-        <h2>Madness (실시간 채팅 웹 어플리케이션)</h2>
-        <h3 className="flex gap-x-2 !my-6">
-          <span>1인 개발</span>
-          <span className={styles["badge"]}>2025.05 ~</span>
-        </h3>
+        <h2>Madness</h2>
+        <span className="text-[15px]">
+          실시간 채팅 및 채널 관리 기능을 제공하는 웹 애플리케이션
+        </span>
+        <h2>Links</h2>
         <ul className="!gap-y-[6px]">
           <li>
             <LinkTag
@@ -61,10 +61,19 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
             />
           </li>
         </ul>
+        <h2>Duration & Role</h2>
+        <ul>
+          <li className="flex gap-x-2">
+            <span className={styles["badge"]}>2025.02 ~ </span>
+            <span>개발 중</span>
+          </li>
+          <li className="flex gap-x-2">1인 개발 프로젝트</li>
+          <li>백엔드, 프론트엔드, 인프라 직접 구축 및 유지보수</li>
+        </ul>
       </section>
       <h2>Project Stack</h2>
       <section className={styles["project-stack"]}>
-        <h3 className="text-md">Backend</h3>
+        <h3>Backend</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Spring Boot 3.4.2</span>
@@ -94,7 +103,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>GitHub Actions</span>
           </li>
         </ul>
-        <h3 className="text-md">Frontend</h3>
+        <h3>Frontend</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Next.js 15</span>
@@ -108,59 +117,38 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
       </section>
-      <h2>Project Structure</h2>
-      <section className={styles["feature-development"]}></section>
     </div>
-    <div className={styles["swing-introduction"]}>
-      <h2>Skills</h2>
-      <section className={styles["skills"]}>
-        <h3 className="text-md">Spring Boot, JPA, JAVA</h3>
-        <ul>
-          <li>
-            Spring Boot 기반의 RESTful API를 직접 설계하고 구현해 본 경험이
-            있으며, RDBMS와 연동하여 CRUD 및 웹소켓 비즈니스 로직을 처리해 본
-            경험이 있습니다.
-          </li>
-          <li>
-            Spring Security를 사용해 JWT 기반의 인증 및 인가 기능을 구현할 수
-            있습니다
-          </li>
-        </ul>
-        <h3 className="text-md">MySQL, MariaDB, PostgreSQL</h3>
-        <ul>
-          <li>
-            트랜잭션 처리, 인덱스 설계, 정규화 등을 고려한 테이블을 설계할 수
-            있습니다.
-          </li>
-        </ul>
-        <h3 className="text-md">React, Javascript, Typescript</h3>
-        <ul>
-          <li>
-            간단한 프론트엔드 웹 애플리케이션을 직접 개발할 수 있으며, 백엔드
-            API와의 통신 및 상태 관리를 활용한 동적인 UI 구현이 가능합니다.
-          </li>
-          <li>
-            JavaScript/TypeScript의 비동기 처리에 대한 이해를 바탕으로, 사용자
-            경험을 고려한 비동기 로직을 구현할 수 있습니다.
-          </li>
-        </ul>
-      </section>
-      <h2>Certificate</h2>
-      <section className={styles["certificate"]}>
-        <ul>
-          <li>
-            정보처리기사 <span className={styles["badge"]}>2024.09</span>
-          </li>
-        </ul>
-      </section>
-      <h2>Education</h2>
-      <section className={styles["certificate"]}>
-        <ul>
-          <li>
-            건국대학교 컴퓨터공학과 졸업{" "}
-            <span className={styles["badge"]}>2020.02</span>
-          </li>
-        </ul>
+    <div
+      className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
+    >
+      <section className={`${styles["features"]}`}>
+        <h2>Index page</h2>
+        <div className="flex gap-x-5">
+          <div className="w-2/6">
+            <img src="/images/swing/index.png" />
+          </div>
+          <div className="w-4/6">
+            <h3>Caffeine 활용한 실시간 인기 채널 집계</h3>
+            <ul>
+              <li>
+                <span>카페인 도입 이유</span>
+                <LinkTag
+                  href="https://sumr.it/post/5"
+                  tag="Caffeine 블로그 포스트"
+                  favicon="https://sumr.it/favicon.ico"
+                />
+              </li>
+              <li>
+                <span>설정 및 사용</span>
+                <LinkTag
+                  href="https://sumr.it/post/5"
+                  tag="Caffeine 설정, 사용 블로그 포스트"
+                  favicon="https://sumr.it/favicon.ico"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   </Template>
