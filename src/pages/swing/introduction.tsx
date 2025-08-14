@@ -190,7 +190,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <h2>Project</h2>
       <section className={styles["project"]}>
         <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
-        <span className={styles["badge"]}>2025.05 ~ </span>
+        <span className={styles["badge"]}>2025.02 ~ </span>
         <ul>
           <li>
             Backend
