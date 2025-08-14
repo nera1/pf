@@ -30,7 +30,7 @@ export const LinkTag: React.FC<LinkTagProps> = ({ href, tag, favicon }) => (
 const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
-      <section className={`${styles["info"]} flex gap-x-12 mb-5`}>
+      <section className={`${styles["info"]} flex gap-x-12`}>
         <Avatar width={180} height={180} borderRadius={"6.25%"} />
         <div className="flex flex-col justify-center gap-y-2">
           <span className="text-xl font-bold">엄인용</span>
@@ -65,72 +65,47 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </div>
       </section>
       <section className={`${styles["story"]}`}>
-        <h2 className="text-lg m-0">My Story</h2>
-        <h3 className="text-md">방향을 몰라도, 스스로 길을 찾아내다</h3>
+        <h2 className="text-lg m-0">Introduction</h2>
+        <h3 className="text-md">시행착오 속에서 길을 찾아내는 개발자</h3>
         <p>
-          저는 컴퓨터 공학을 전공했지만, 웹 개발 분야에 대해서는 거의 알지 못한
-          채로 출발했습니다. 웹페이지가 HTML, JS, CSS로 구성된다는 기본적인
-          정보를 바탕으로 무작정 책을 사서 따라 하며 공부를 시작했습니다.
+          백엔드, 프론트엔드, 인프라까지 웹 애플리케이션을 위한 기술이라면
+          무엇이든 적극적으로 학습합니다.
         </p>
         <p>
-          웹페이지를 다른 사용자들도 볼 수 있도록 하려면 서버와 데이터베이스가
-          필요하다는 사실을 깨닫고, Node.js와 관계형 데이터베이스를
-          학습했습니다. 이후 사용자 편의성을 높이고자 프론트엔드 기술을
-          익혔으며, 유지보수와 확장성을 위해 안정적인 프레임워크인 Spring
-          Boot까지 학습했습니다.
+          주어진 어떠한 문제라도 시행착오 속에서 스스로 답을 찾아 해결할 수
+          있다는 자신감이 있습니다.
+        </p>
+        <h3 className="text-md">부담감에서 책임감을 이끌어내는 개발자</h3>
+        <p>
+          첫 직장에서 선임자들이 모두 떠난 상황에서 기존 코드를 유지·보수하고
+          서버 납품을 맡은 경험이 있습니다.
         </p>
         <p>
-          스스로 목표를 찾고, 필요에 따라 학습을 주도적으로 진행한 덕분에 저는
-          웹 어플리케이션의 전반적인 구조와 개발부터 배포까지 모든 단계를 스스로
-          익히게 되었으며, 주어진 어떠한 문제라도 스스로 그 답을 찾아 해결 할 수
-          있다는 자신감을 얻게 되었습니다.
+          이 경험을 통해 어떤 어려운 상황에서도 맡은 일을 끝까지 완수하는
+          개발자로 성장할 수 있었습니다.
         </p>
-        <h3 className="text-md">홀로 견딘 부담이 개발자의 책임감으로</h3>
+        <h3 className="text-md">관심이 곧 협업이라 믿는 개발자</h3>
         <p>
-          작은 규모의 첫 직장은 업무에 대한 명확한 설명이나 지원이 부족한
-          환경이었습니다. 입사 직후 업무에 대한 인수인계도 제대로 받지 못한 채
-          얼마 안 되는 선임자들마저 퇴사와 이직으로 모두 떠나고 말았습니다. 결국
-          저는 혼자 남아 기존 코드의 유지보수뿐 아니라 신규 사업을 위한
-          프로젝트까지 맡게 되었습니다. 입사 초기였던 제게는 버거운
-          도전이었습니다.
+          부트캠프 최종 프로젝트에서 쏟아지는 문제들 속에서 단순한 업무 분담과
+          협업은 전혀 다르다는 것을 깨닫고, 하루에 최소 한 번의 미팅을 통해
+          서로의 진척도를 확인하고 어려움을 공유하며 문제를 해결했습니다.
         </p>
         <p>
-          막막한 상황이었지만, 저는 책임감을 갖고 주어진 일을 끝까지 해내기로
-          결심했습니다. 혼자서 학습하고 수많은 시행착오를 반복하며, 결국 기한
-          내에 정상적으로 작동하는 애플리케이션을 만들어 성공적으로
-          납품했습니다. 이 경험을 통해 저는 어떤 어려운 상황에서도 맡은 일을
-          끝까지 완수하는 개발자로 성장할 수 있었습니다.
-        </p>
-        <h3 className="text-md">대화가 막히면 코드도 막혔다</h3>
-        <p>
-          지난날 혼자서 모든 상황과 코드를 파악하며 개발해 온 저는 부트캠프 최종
-          프로젝트에서 팀장을 맡았습니다. 역할만 잘 나누고 각자가 맡은 일을
-          해내면 문제가 없을 것이라 생각했지만, 실제로는 병합 과정에서 서로의
-          코드를 덮어쓰거나 한 작업의 지연이 나머지 작업까지 늦추는 일이
-          잦았습니다. 그제야 분업과 협업은 전혀 다르다는 것을 깨닫게 되었습니다.
-        </p>
-        <p>
-          이에 매일 최소 한 번 전원이 모여 어려운 문제를 공유하고, 진행이 더딘
-          작업을 파악해 인원을 추가 투입했으며, 코드를 작성한 구성원이 함께 모여
-          병합을 진행해 충돌을 해결했습니다. 그 결과 일정 내 프로젝트를
-          성공적으로 완수해 배포까지 마칠 수 있었습니다. 원활한 협업의 핵심은
-          구성원들과의 잦은 소통과 지속적인 진행 확인임을 알게 된 일이었습니다.
+          관심은 관여로, 관여는 결과로 이어지기에 자신의 코드에만 빠져있는
+          개발자가 되지 않기 위해 노력합니다.
         </p>
       </section>
-    </div>
-    <div className={styles["swing-introduction"]}>
       <h2>Skills</h2>
       <section className={styles["skills"]}>
-        <h3 className="text-md">Spring Boot, JPA, JAVA</h3>
+        <h3 className="text-md">Spring Boot, Spring Security, JPA, JAVA</h3>
         <ul>
           <li>
-            Spring Boot 기반의 RESTful API를 직접 설계하고 구현해 본 경험이
-            있으며, RDBMS와 연동하여 CRUD 및 웹소켓 비즈니스 로직을 처리해 본
-            경험이 있습니다.
+            Spring Boot, JPA를 활용한 RESTful API를 직접 설계하고 WebSocket을
+            적용한 경험이 있습니다.
           </li>
           <li>
             Spring Security를 사용해 JWT 기반의 인증 및 인가 기능을 구현할 수
-            있습니다
+            있습니다.
           </li>
         </ul>
         <h3 className="text-md">MySQL, MariaDB, PostgreSQL</h3>
@@ -143,29 +118,9 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         <h3 className="text-md">React, Javascript, Typescript</h3>
         <ul>
           <li>
-            간단한 프론트엔드 웹 애플리케이션을 직접 개발할 수 있으며, 백엔드
-            API와의 통신 및 상태 관리를 활용한 동적인 UI 구현이 가능합니다.
-          </li>
-          <li>
-            JavaScript/TypeScript의 비동기 처리에 대한 이해를 바탕으로, 사용자
-            경험을 고려한 비동기 로직을 구현할 수 있습니다.
-          </li>
-        </ul>
-      </section>
-      <h2>Certificate</h2>
-      <section className={styles["certificate"]}>
-        <ul>
-          <li>
-            정보처리기사 <span className={styles["badge"]}>2024.09</span>
-          </li>
-        </ul>
-      </section>
-      <h2>Education</h2>
-      <section className={styles["certificate"]}>
-        <ul>
-          <li>
-            건국대학교 컴퓨터공학과 졸업{" "}
-            <span className={styles["badge"]}>2020.02</span>
+            간단한 프론트엔드 웹 애플리케이션을 직접 개발할 수 있으며,
+            Javascript, Typescript를 활용한 Backend API 통신, 상태관리를 통한
+            동적 UI를 만들 수 있습니다.
           </li>
         </ul>
       </section>
@@ -225,6 +180,25 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
                 GitHub Actions 워크플로우로 백엔드, 프론트엔드 빌드·배포 자동화
               </li>
             </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div className={styles["swing-introduction"]}>
+      <h2>Certificate</h2>
+      <section className={styles["certificate"]}>
+        <ul>
+          <li>
+            정보처리기사 <span className={styles["badge"]}>2024.09</span>
+          </li>
+        </ul>
+      </section>
+      <h2>Education</h2>
+      <section className={styles["certificate"]}>
+        <ul>
+          <li>
+            건국대학교 컴퓨터공학과 졸업{" "}
+            <span className={styles["badge"]}>2020.02</span>
           </li>
         </ul>
       </section>

@@ -88,7 +88,7 @@
     padding-top: 16px;
     & p {
       font-size: 15px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.25rem;
     }
   }
   & > .skills {
@@ -96,6 +96,7 @@
     & ul {
       font-size: 15px;
       gap: 4px;
+      margin-bottom: 0;
     }
   }
 
