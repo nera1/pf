@@ -132,15 +132,22 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         <span className={styles["badge"]}>2021.12 - 2024.03</span>
         <ul>
           <li>
-            IoT 엣지 디바이스인 LTE 라우터에서 송신하는 데이터를 MQTT 프로토콜을
-            통해 수집하고, 이를 Mosquitto 브로커로 받은 뒤 Node-RED로 파싱 및
-            가공해 시계열 데이터베이스인 InfluxDB에 저장하는 일련의 데이터 수집
-            파이프라인을 구성하였습니다
+            AWS EC2 환경에서 Mosquitto, Node-RED, InfluxDB, Grafana 기반의 IoT
+            데이터 수집 시스템을 운영하고 개발하였습니다.
           </li>
           <li>
-            등록된 라우터의 데이터만을 수집할 수 있도록 PostgreSQL에 저장된
-            라우터 정보를 Redis에 캐싱하여 MQTT 메세지의 topic과 payload를
-            필터링하는 Node-red 플로우를 제작하였습니다
+            Javascript 언어로 Node-RED에 MQTT 메세지 파싱 플로우를
+            개발하였습니다.
+          </li>
+          <li>
+            PostgreSQL 장비 정보 테이블을 Redis 캐싱하여 100~200대의 LTE
+            라우터에서 전송하는 센서 데이터를 필터링하는 Node-RED 플로우를
+            개발하였습니다.
+          </li>
+          <li>
+            InfluxDB에 수집된 센서 데이터 및, LTE 라우터의 네트워크 성능
+            지표(RSRP, SINR, TX/RX 등)를 InfluxDB에 수집하고 Grafana를 통해
+            시각화하였습니다.
           </li>
         </ul>
       </section>
