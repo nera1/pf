@@ -19,10 +19,10 @@
 
   .portfolio {
     li {
-      font-size: 17px !important;
+      font-size: 15px !important;
     }
     ul {
-      font-size: 17px !important;
+      font-size: 15px !important;
     }
     h2 {
       font-size: 22px;
@@ -39,6 +39,7 @@
       justify-content: center;
       flex-direction: column;
       gap: 10px;
+      font-size: 15px;
     }
     h3:first-child {
       margin-top: 1rem;
@@ -101,19 +102,22 @@
   }
 
   & > .career {
+    margin-bottom: 0;
     & ul {
-      padding: 1rem 2em;
+      padding: 1rem 1em;
+      font-size: 15px;
     }
   }
 
   & > .project {
-    & ul {
-      padding: 1rem 2em;
-      & ul {
-        padding: 0.25rem 1em;
-        font-size: 16px;
-        gap: 3px;
-      }
+    & li {
+      font-size: 15px;
     }
+    & ul {
+      padding: 1rem 1em;
+    }
+  }
+
+  & > .vistion {
   }
 }

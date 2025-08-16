@@ -125,74 +125,110 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </ul>
       </section>
     </div>
-    <div className={styles["swing-introduction"]}>
+    <div className={`${styles["swing-introduction"]} !mb-0 !pb-0`}>
       <h2>Career</h2>
       <section className={styles["career"]}>
         <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
         <span className={styles["badge"]}>2021.12 - 2024.03</span>
-        <ul>
+        <ul className="!pb-0 !mb-0">
           <li>
-            AWS EC2 환경에서 Mosquitto, Node-RED, InfluxDB, Grafana 기반의 IoT
-            데이터 수집 시스템을 운영하고 개발하였습니다.
+            AWS 환경에서 운영하는 사내 시스템을 유지·보수하였습니다.
+            <ul>
+              <li>
+                EC2 인스턴스에서 실행되는 Node-RED, InfluxDB, Grafana로 구성된
+                사내 시스템이 실행되는 EC2 인스턴스를 관리하였습니다.
+              </li>
+              <li>
+                Node-RED에 Javascript언어로 MQTT 메세지 파싱 플로우를
+                개발하였습니다.
+              </li>
+            </ul>
           </li>
           <li>
-            Javascript 언어로 Node-RED에 MQTT 메세지 파싱 플로우를
-            개발하였습니다.
-          </li>
-          <li>
-            PostgreSQL 장비 정보 테이블을 Redis 캐싱하여 100~200대의 LTE
-            라우터에서 전송하는 센서 데이터를 필터링하는 Node-RED 플로우를
-            개발하였습니다.
-          </li>
-          <li>
-            InfluxDB에 수집된 센서 데이터 및, LTE 라우터의 네트워크 성능
-            지표(RSRP, SINR, TX/RX 등)를 InfluxDB에 수집하고 Grafana를 통해
-            시각화하였습니다.
+            사내 시스템을 개선하고 편의 기능을 개발하였습니다.
+            <ul>
+              <li>
+                지원이 끝난 장비, 정보가 바뀐 장비의 데이터를 제대로 필터링 하지
+                못하는 문제가 발생
+                <ul>
+                  <li>
+                    PostgreSQL 장비 정보 테이블을 Redis 캐싱하여 약 200대의 LTE
+                    라우터에서 전송하는 센서 데이터를 필터링하는 Node-RED
+                    플로우를 개발하였습니다.
+                  </li>
+                  <li>
+                    장비 정보 추가, 업데이트, 삭제 시 Redis Cache도 함께
+                    변경하도록 Node-RED 플로우를 개선하였습니다.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
-      <h2>Project</h2>
+      <h2 className="!mt-0">Project</h2>
       <section className={styles["project"]}>
         <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
-        <span className={styles["badge"]}>2025.02 ~ </span>
+        <div className="flex gap-x-3">
+          <span className={styles["badge"]}>2025.02 ~ </span>
+          <span>1인 개발</span>
+        </div>
         <ul>
           <li>
-            Backend
-            <ul>
-              <li>
-                Spring Boot 3.4, Spring WebSocket(STOMP)/SockJS 기반 채팅 서버
-                개발
-              </li>
-              <li>WebSocket 연결 시 JWT 인증 처리 기능 구현</li>
-              <li>Caffeine 캐시를 활용한 인가 및 조회수 집계 기능 개발</li>
-            </ul>
+            Spring Boot, WebSocket 기반 채팅 어플리케이션 프로젝트 (포트폴리오
+            참조)
+          </li>
+        </ul>
+        <h3 className="text-md">Intarea(인테리어 중개 플랫폼)</h3>
+        <div className="flex gap-x-3">
+          <span className={styles["badge"]}>2024.08 ~ 2024.09</span>
+          <span>5인 개발</span>
+        </div>
+        <ul>
+          <li className="flex gap-x-1">
+            Spring Boot, JPA 기반 부트캠프 프로젝트
+            <LinkTag
+              href="https://github.com/ekd594ff/jhta2402_final?tab=readme-ov-file"
+              tag="Intarea Github Respository"
+              favicon="https://github.githubassets.com/favicons/favicon.svg"
+            />
           </li>
           <li>
-            FrontEnd
+            프로젝트 팀장으로서 코드 충돌 문제와 연쇄적인 개발 지연 문제를
+            해결하였습니다.
             <ul>
-              <li>Next.js 13, Github Pages를 사용한 프론트엔드 페이지 배포</li>
               <li>
-                SockJS-STOMP 클라이언트 연동해 실시간 메시징, 재연결 및 오류
-                핸들링 처리
+                매일 한번 이상의 미팅에서 문제점을 공유하고 팀원과 코드 병합을
+                함께 진행했습니다.
+              </li>
+              <li>
+                개발 일정을 Notion으로 공유하여, 서로의 진행 상황을 파악할 수
+                있게 하였습니다.
+                <ul>
+                  <li>
+                    <LinkTag
+                      href="https://phase-rail-b25.notion.site/JHTA-2402-1-Final-60254b8037b44088857305189c6eb412"
+                      tag="Intarea 프로젝트 일정관리 Notion"
+                      favicon="https://www.notion.com/front-static/favicon.ico"
+                    />
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
-          <li>
-            Cloud & CI/CD
-            <ul>
-              <li>
-                Cloudtype에 백엔드 배포, Supabase로 PostgreSQL 호스팅 환경 구성
-              </li>
-              <li>
-                GitHub Actions 워크플로우로 백엔드, 프론트엔드 빌드·배포 자동화
-              </li>
-            </ul>
-          </li>
+          <li></li>
         </ul>
       </section>
     </div>
     <div className={styles["swing-introduction"]}>
-      <h2>Certificate</h2>
+      <h2>Motivation & Vision</h2>
+    </div>
+  </Template>
+));
+
+/**
+
+
       <section className={styles["certificate"]}>
         <ul>
           <li>
@@ -209,8 +245,8 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
       </section>
-    </div>
-  </Template>
-));
+
+
+ */
 
 export default SwingIntroduction;
