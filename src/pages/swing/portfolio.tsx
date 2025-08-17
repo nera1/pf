@@ -73,7 +73,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
       </section>
       <h2>Project Stack</h2>
       <section className={styles["project-stack"]}>
-        <h3>Backend</h3>
+        <h3 className="text-md">Backend</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Spring Boot 3.4.2</span>
@@ -103,7 +103,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>GitHub Actions</span>
           </li>
         </ul>
-        <h3>Frontend</h3>
+        <h3 className="text-md">Frontend</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Next.js 15</span>
@@ -128,10 +128,10 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <img src="/images/swing/index.png" />
           </div>
           <div className="w-4/6">
-            <h3>실시간 인기 채널 목록</h3>
+            <h3 className="text-md">실시간 인기 채널 목록</h3>
             <ul>
               <li>
-                <span>채팅 참여자 중복 집계 방지</span>
+                <span>채팅 참여자 중복 집계 문제</span>
                 <LinkTag
                   href="https://sumr.it/post/7"
                   tag="중복 집계를 막기위한 Cache 구조 블로그 포스트"
@@ -139,7 +139,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 />
               </li>
             </ul>
-            <h3>참여자 많은 채널</h3>
+            <h3 className="text-md">참여자 많은 채널</h3>
             <ul>
               <li>
                 <span>Spring Scheduler를 통한 채널 집계</span>
@@ -163,7 +163,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
         <h2>New Channel · Sign In · Create Account</h2>
         <div className="flex gap-x-8">
           <div className="w-4/6">
-            <h3>New Channel · Create Account</h3>
+            <h3 className="text-md">New Channel · Create Account</h3>
             <ul>
               <li>
                 <span>JPA 기반 구현</span>
@@ -179,7 +179,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 />
               </li>
             </ul>
-            <h3>Sign In</h3>
+            <h3 className="text-md">Sign In</h3>
             <ul>
               <li>
                 <span>JWT 기반 인증</span>
@@ -218,7 +218,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <img src="/images/swing/search.png" />
           </div>
           <div className="w-4/6">
-            <h3>채널명 검색</h3>
+            <h3 className="text-md">채널명 검색</h3>
             <ul>
               <li>
                 <span>LIKE 검색 기능 개선</span>
@@ -247,7 +247,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
         <h2>Chat</h2>
         <div className="flex gap-x-8">
           <div className="w-4/6">
-            <h3>Chat Channel</h3>
+            <h3 className="text-md">Chat Channel</h3>
             <ul>
               <li>
                 <span>Websocket JWT 인증</span>
@@ -263,7 +263,7 @@ const SwingPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 />
               </li>
               <li>
-                <span>Caffeine 기반 Websocket 메세지 인가</span>
+                <span>Websocket 메세지 인가 문제</span>
                 <LinkTag
                   href="https://sumr.it/post/5"
                   tag="메세지 인가 문제 및 Caffeine 도입 블로그 포스트"

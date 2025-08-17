@@ -65,8 +65,8 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </div>
       </section>
       <section className={`${styles["story"]}`}>
-        <h2 className="text-lg m-0">Introduction</h2>
-        <h3 className="text-md">시행착오 속에서 길을 찾아내는 개발자</h3>
+        <h2 className="text-lg">Introduction</h2>
+        <h3 className="text-md">시행착오 속에서 길을 찾습니다</h3>
         <p>
           백엔드, 프론트엔드, 인프라까지 웹 애플리케이션을 위한 기술이라면
           무엇이든 적극적으로 학습합니다.
@@ -75,7 +75,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           주어진 어떠한 문제라도 시행착오 속에서 스스로 답을 찾아 해결할 수
           있다는 자신감이 있습니다.
         </p>
-        <h3 className="text-md">부담감에서 책임감을 이끌어내는 개발자</h3>
+        <h3 className="text-md">부담감에서 책임감을 이끌어냅니다</h3>
         <p>
           첫 직장에서 선임자들이 모두 떠난 상황에서 기존 코드를 유지·보수하고
           서버 납품을 맡은 경험이 있습니다.
@@ -84,17 +84,40 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           이 경험을 통해 어떤 어려운 상황에서도 맡은 일을 끝까지 완수하는
           개발자로 성장할 수 있었습니다.
         </p>
-        <h3 className="text-md">관심이 곧 협업이라 믿는 개발자</h3>
+        <h3 className="text-md">관심이 곧 협업이라 믿습니다</h3>
         <p>
           부트캠프 최종 프로젝트에서 쏟아지는 문제들 속에서 단순한 업무 분담과
           협업은 전혀 다르다는 것을 깨닫고, 하루에 최소 한 번의 미팅을 통해
           서로의 진척도를 확인하고 어려움을 공유하며 문제를 해결했습니다.
         </p>
         <p>
-          관심은 관여로, 관여는 결과로 이어지기에 자신의 코드에만 빠져있는
-          개발자가 되지 않기 위해 노력합니다.
+          관심은 관여로, 관여는 결과로 이어지기에 팀원과 팀원의 코드에 늘 주의를
+          기울이려 노력합니다.
         </p>
       </section>
+      <br />
+      <h2>Motivation & Vision</h2>
+      <section className={styles["motivation-vision"]}>
+        <p>
+          국내 모빌리티 기업들이 숙박·대리운전 등 모빌리티의 주변 영역까지
+          사업을 확장하며 이동 전반에 대한 가치를 추구하고 있지만, 때로는 해당
+          기업이 추구하는 바가 명확하지 않아 보였습니다.
+        </p>
+        <p>
+          반면 더 스윙은 서울 패스, 전기 바이크·자전거 등 다양한 서비스가 자가용
+          의존도를 낮춰 ‘차를 위한 도시를 사람을 위한 도시로’라는 비전으로
+          수렴하고 있다고 느꼈습니다. 이 명확한 비전과 실행력에 끌려, 백엔드
+          개발자로 그 비전에 기여하고자 지원하였습니다.
+        </p>
+        <p>
+          웹 개발을 전혀 몰랐던 때부터 HTML·CSS·JavaScript로 시작해, 책 속
+          코드를 따라 하고 수없이 시행착오를 겪으며 개발자로서 끝까지 해내는
+          지구력을 키웠습니다. 실패해도 포기하지 않는 이 지구력으로로 스윙의
+          빠르고 다양한 시도에 꾸준히 발맞추겠습니다.
+        </p>
+      </section>
+    </div>
+    <div className={`${styles["swing-introduction"]} !mb-0 !pb-0`}>
       <h2>Skills</h2>
       <section className={styles["skills"]}>
         <h3 className="text-md">Spring Boot, Spring Security, JPA, JAVA</h3>
@@ -118,14 +141,16 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
         <h3 className="text-md">React, Javascript, Typescript</h3>
         <ul>
           <li>
-            간단한 프론트엔드 웹 애플리케이션을 직접 개발할 수 있으며,
-            Javascript, Typescript를 활용한 Backend API 통신, 상태관리를 통한
-            동적 UI를 만들 수 있습니다.
+            Javascript, Typescript의 비동기적 언어의 특성을 이해하고, 간단한
+            프론트엔드 웹 애플리케이션을 직접 개발할 수 있습니다.
+          </li>
+          <li>
+            Backend API 통신 및(AJAX), 프론트엔드의 상태관리를 통해 동적 UI를
+            만들 수 있습니다.
           </li>
         </ul>
       </section>
-    </div>
-    <div className={`${styles["swing-introduction"]} !mb-0 !pb-0`}>
+      <br />
       <h2>Career</h2>
       <section className={styles["career"]}>
         <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
@@ -166,7 +191,9 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
       </section>
-      <h2 className="!mt-0">Project</h2>
+    </div>
+    <div className={styles["swing-introduction"]}>
+      <h2>Project</h2>
       <section className={styles["project"]}>
         <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
         <div className="flex gap-x-3">
@@ -216,28 +243,18 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
               </li>
             </ul>
           </li>
-          <li></li>
         </ul>
       </section>
-    </div>
-    <div className={styles["swing-introduction"]}>
-      <h2>Motivation & Vision</h2>
-    </div>
-  </Template>
-));
-
-/**
-
-
-      <section className={styles["certificate"]}>
+      <br />
+      <h2>Others</h2>
+      <section className={styles["others"]}>
+        <h3 className="text-md">Certificate</h3>
         <ul>
           <li>
             정보처리기사 <span className={styles["badge"]}>2024.09</span>
           </li>
         </ul>
-      </section>
-      <h2>Education</h2>
-      <section className={styles["certificate"]}>
+        <h3 className="text-md">Education</h3>
         <ul>
           <li>
             건국대학교 컴퓨터공학과 졸업{" "}
@@ -245,6 +262,14 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
       </section>
+    </div>
+  </Template>
+));
+
+/**
+
+
+
 
 
  */
