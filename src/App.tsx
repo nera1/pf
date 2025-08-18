@@ -19,6 +19,8 @@ import styles from "./App.module.scss";
 import SwingIntroduction from "./pages/swing/introduction";
 import AptnerIntroduction from "./pages/aptner/introduction";
 import AptnerPortfolio from "./pages/aptner/portfolio";
+import AblyIntroduction from "./pages/ably/introduction";
+import AblyPortfolio from "./pages/ably/portfolio";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -119,6 +121,16 @@ function App() {
               <Route
                 path="portfolio"
                 element={<AptnerPortfolio ref={childRef} />}
+              />
+            </Route>
+            <Route path="/ably">
+              <Route
+                path="introduction"
+                element={<AblyIntroduction ref={childRef} />}
+              />
+              <Route
+                path="portfolio"
+                element={<AblyPortfolio ref={childRef} />}
               />
             </Route>
           </Routes>

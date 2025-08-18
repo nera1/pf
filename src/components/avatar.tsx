@@ -47,7 +47,7 @@ const Avatar: React.FC<AvatarProps> = ({
         width,
         height,
         borderRadius,
-        backgroundColor, // 컨테이너 배경색 (레터박스 영역 색상)
+        backgroundColor,
         border: "1px solid #e5e5e5",
         display: "flex",
         alignItems: "center",
