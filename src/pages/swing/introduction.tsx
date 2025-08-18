@@ -37,6 +37,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           borderRadius={"12.5%"}
           offsetY={10}
           scale={1.26}
+          backgroundColor="#fff"
         />
         <div className="flex flex-col justify-center gap-y-2">
           <span className="text-xl font-bold">엄인용</span>
