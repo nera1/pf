@@ -31,7 +31,13 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
       <section className={`${styles["info"]} flex gap-x-12`}>
-        <Avatar width={180} height={180} borderRadius={"6.25%"} />
+        <Avatar
+          width={180}
+          height={180}
+          borderRadius={"12.5%"}
+          offsetY={10}
+          scale={1.26}
+        />
         <div className="flex flex-col justify-center gap-y-2">
           <span className="text-xl font-bold">엄인용</span>
           <span className="text-md mt-1 font-medium text-neutral-600">
@@ -154,7 +160,9 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <h2>Career</h2>
       <section className={styles["career"]}>
         <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
-        <span className={styles["badge"]}>2021.12 - 2024.03</span>
+        <div className="flex gap-x-3 !text-[15px]">
+          <span className={styles["badge"]}>2021.12 ~ 2024.03</span>
+        </div>
         <ul className="!pb-0 !mb-0">
           <li>
             AWS 환경에서 운영하는 사내 시스템을 유지·보수하였습니다.
@@ -196,7 +204,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <h2>Project</h2>
       <section className={styles["project"]}>
         <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
-        <div className="flex gap-x-3">
+        <div className="flex gap-x-3 !text-[15px]">
           <span className={styles["badge"]}>2025.02 ~ </span>
           <span>1인 개발</span>
         </div>
@@ -207,7 +215,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </li>
         </ul>
         <h3 className="text-md">Intarea(인테리어 중개 플랫폼)</h3>
-        <div className="flex gap-x-3">
+        <div className="flex gap-x-3 !text-[15px]">
           <span className={styles["badge"]}>2024.08 ~ 2024.09</span>
           <span>5인 개발</span>
         </div>
@@ -231,7 +239,7 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
               <li>
                 개발 일정을 Notion으로 공유하여, 서로의 진행 상황을 파악할 수
                 있게 하였습니다.
-                <ul>
+                <ul className="!pl-0">
                   <li>
                     <LinkTag
                       href="https://phase-rail-b25.notion.site/JHTA-2402-1-Final-60254b8037b44088857305189c6eb412"
@@ -250,14 +258,15 @@ const SwingIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <section className={styles["others"]}>
         <h3 className="text-md">Certificate</h3>
         <ul>
-          <li>
-            정보처리기사 <span className={styles["badge"]}>2024.09</span>
+          <li className="flex gap-x-3 !text-[15px]">
+            <span>정보처리기사</span>
+            <span className={styles["badge"]}>2024.09</span>
           </li>
         </ul>
         <h3 className="text-md">Education</h3>
         <ul>
-          <li>
-            건국대학교 컴퓨터공학과 졸업{" "}
+          <li className="flex gap-x-3 !text-[15px]">
+            <span>건국대학교 컴퓨터공학과 졸업</span>
             <span className={styles["badge"]}>2020.02</span>
           </li>
         </ul>

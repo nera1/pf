@@ -5,6 +5,9 @@ interface AvatarProps {
   width?: number | string;
   height?: number | string;
   borderRadius?: number | string;
+  scale?: number;
+  offsetX?: number;
+  offsetY?: number;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
@@ -12,6 +15,9 @@ const Avatar: React.FC<AvatarProps> = ({
   width = 300,
   height = 300,
   borderRadius = 8,
+  scale = 1,
+  offsetX = 0,
+  offsetY = 0,
 }) => {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -39,24 +45,30 @@ const Avatar: React.FC<AvatarProps> = ({
         width,
         height,
         borderRadius,
-        background: "#f5f5f5",
+        background: "#ffffff",
+        border: "1px solid #e5e5e5",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
         overflow: "hidden",
+        position: "relative",
       }}
     >
       {imageSrc ? (
         <img
           src={imageSrc}
-          alt="uploded iamge"
+          alt="uploaded image"
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
+            transform: `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`,
+            transformOrigin: "center center",
+            maxWidth: "100%",
+            maxHeight: "100%",
+            objectFit: "contain",
+            userSelect: "none",
+            pointerEvents: "none",
           }}
+          draggable={false}
         />
       ) : (
         <span style={{ fontSize: "48px" }}>🙋🏻‍♂️</span>

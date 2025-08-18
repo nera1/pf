@@ -1,13 +1,13 @@
 @use "variables" as vars;
 
 @font-face {
-  font-family: "Pretendard";
+  font-family: "Nanum Gothic";
   font-weight: normal;
-  src: url("/fonts/Pretendard-Medium.ttf") format("truetype");
+  src: url("/fonts/NanumGothic.woff2") format("woff2");
 }
 
 .swing-introduction * {
-  font-family: "Pretendard" !important;
+  font-family: "Nanum Gothic" !important;
 }
 
 .swing-introduction {
@@ -58,7 +58,7 @@
   }
 
   & .badge {
-    background-color: #000;
+    background-color: #00a8ff;
     color: #fff;
     padding: 0px 6px;
     border-radius: 3px;
