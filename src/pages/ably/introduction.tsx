@@ -71,7 +71,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </div>
       </section>
       <section className={`${styles["story"]}`}>
-        <h2 className="text-lg">Introduction</h2>
+        <h2 className="text-lg">소개</h2>
         <h3 className="text-md">설득이 곧 협업이라 믿습니다</h3>
         <p>
           부트캠프 최종 프로젝트에서 템플릿 엔진만으로는 동적 UI를 기한 내
@@ -80,21 +80,21 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
           부분은 함께 해결하며 프로젝트를 진행하였습니다.
         </p>
         <p>
-          그 결과 다른 팀과 차별화된 UI로 기한 내 개발·배포를 마쳤고, 프로젝트
-          방향을 정할 때 팀원을 설득하고 합의 뒤 한 팀으로 실행하는 과정의
-          중요성을 실감했습니다.
+          팀원이 모두 노력한 결과 다른 팀과 차별화된 UI로 기한 내 개발·배포를
+          마쳤으며 동시에 프로젝트 방향을 정할 때 팀원을 설득하고 합의하는
+          과정의 어려움과 중요성 역시 실감하게되었습니다.
         </p>
         <h3 className="text-md">시행착오 속에서 길을 찾습니다</h3>
         <p>
           개인 프로젝트에서 실시간 참여자 집계 과정에서 중복 집계 문제가
           발생했습니다. 이를 해결하고자 캐시 구조를 설계·검증하며 개선을 반복한
-          결과, 중복 집계를 막는 효과적인 구조를 찾을 수 있게되었습니다.
+          결과, 중복 집계를 막는 효과적인 구조를 찾을 수 있게 되었습니다.
         </p>
         <p>
           한 번에 정답을 찾기보다 작은 실험을 거듭한 과정이 더 큰 개선을
           이끌어낼 수 있음을 깨달은 경험이었습니다.
         </p>
-        <h3 className="text-md">멈추지 않고 배웠습니다</h3>
+        <h3 className="text-md">멈추지 않고 배워나갑니다</h3>
         <p>
           백엔드와 프론트엔드가 무엇인지도 몰랐던 시절, HTML·CSS·JavaScript부터
           시작해 웹 애플리케이션을 만드는 전 과정을 스스로 익혔습니다. 개발부터
@@ -107,7 +107,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </p>
       </section>
       <br />
-      <h2>Motivation</h2>
+      <h2>지원동기</h2>
       <p>
         에이블리는 단순한 상품 판매 서비스가 아니라 셀러를 창출하는
         플랫폼입니다. 셀러가 겪는 기술적 장벽을 낮추고 그들의 고민을 에이블리의
@@ -118,7 +118,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <section className={styles["motivation-vision"]}></section>
     </div>
     <div className={`${styles["swing-introduction"]} !mb-0 !pb-0`}>
-      <h2>Skills</h2>
+      <h2>기술</h2>
       <section className={styles["skills"]}>
         <h3 className="text-md">Spring Boot, Spring Security, JPA, JAVA</h3>
         <ul>
@@ -145,13 +145,12 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
             프론트엔드 웹 애플리케이션을 직접 개발할 수 있습니다.
           </li>
           <li>
-            Backend API 통신 및(AJAX), 프론트엔드의 상태관리를 통해 동적 UI를
-            만들 수 있습니다.
+            Backend API 통신 (AJAX), 프론트엔드의 상태관리를 통해 동적 UI를 만들
+            수 있습니다.
           </li>
         </ul>
       </section>
-      <br />
-      <h2>Career</h2>
+      <h2>경력</h2>
       <section className={styles["career"]}>
         <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
         <div className="flex gap-x-3 !text-[15px]">
@@ -166,7 +165,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
                 사내 시스템이 실행되는 EC2 인스턴스를 관리하였습니다.
               </li>
               <li>
-                Node-RED에 Javascript언어로 MQTT 메세지 파싱 플로우를
+                Node-RED에 Javascript 언어로 MQTT 메시지 파싱 플로우를
                 개발하였습니다.
               </li>
             </ul>
@@ -184,10 +183,15 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
                     플로우를 개발하였습니다.
                   </li>
                   <li>
-                    장비 정보 추가, 업데이트, 삭제 시 Redis Cache도 함께
+                    장비 정보 추가, 업데이트, 삭제 시 Redis 캐시도 함께
                     변경하도록 Node-RED 플로우를 개선하였습니다.
                   </li>
                 </ul>
+              </li>
+              <li>
+                InfluxDB의 데이터를 Grafana 패널을 통해 시각화하고, 장비 추가,
+                삭제 및 정보 변경작업을 진행하는 Grafana의 패널을 React로
+                구성하였습니다.
               </li>
             </ul>
           </li>
@@ -195,7 +199,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
       </section>
     </div>
     <div className={styles["swing-introduction"]}>
-      <h2>Project</h2>
+      <h2>프로젝트</h2>
       <section className={styles["project"]}>
         <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
         <div className="flex gap-x-3 !text-[15px]">
@@ -218,7 +222,7 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
             Spring Boot, JPA 기반 부트캠프 프로젝트
             <LinkTag
               href="https://github.com/ekd594ff/jhta2402_final?tab=readme-ov-file"
-              tag="Intarea Github Respository"
+              tag="Intarea Github Repository"
               favicon="https://github.githubassets.com/favicons/favicon.svg"
             />
           </li>
@@ -248,16 +252,16 @@ const AblyIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </ul>
       </section>
       <br />
-      <h2>Others</h2>
+      <h2>기타</h2>
       <section className={styles["others"]}>
-        <h3 className="text-md">Certificate</h3>
+        <h3 className="text-md">자격증</h3>
         <ul>
           <li className="flex gap-x-3 !text-[15px]">
             <span>정보처리기사</span>
             <span className={styles["badge"]}>2024.09</span>
           </li>
         </ul>
-        <h3 className="text-md">Education</h3>
+        <h3 className="text-md">교육</h3>
         <ul>
           <li className="flex gap-x-3 !text-[15px]">
             <span>건국대학교 컴퓨터공학과 졸업</span>

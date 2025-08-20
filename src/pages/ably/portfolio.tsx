@@ -31,13 +31,13 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
     <div
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
     >
-      <h1 className="text-xl !my-1">Portfolio</h1>
+      <h1 className="text-xl !my-1">포트폴리오</h1>
       <section className={`${styles["portfolio"]}`}>
         <h2>Madness</h2>
         <span className="text-[17px]">
           실시간 채팅 및 채널 관리 기능을 제공하는 웹 애플리케이션
         </span>
-        <h2>Links</h2>
+        <h2>링크</h2>
         <ul className="!gap-y-[6px]">
           <li>
             <LinkTag
@@ -61,7 +61,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
             />
           </li>
         </ul>
-        <h2>Duration & Role</h2>
+        <h2>기간 및 역할</h2>
         <ul>
           <li className="flex gap-x-2">
             <span className={styles["badge"]}>2025.02 ~ </span>
@@ -71,9 +71,9 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
           <li>백엔드, 프론트엔드, 인프라 직접 구축 및 유지보수</li>
         </ul>
       </section>
-      <h2>Project Stack</h2>
+      <h2>사용 기술</h2>
       <section className={styles["project-stack"]}>
-        <h3 className="text-md">Backend</h3>
+        <h3 className="text-md">백엔드</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Spring Boot 3.4.2</span>
@@ -84,7 +84,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>
               <LinkTag
                 favicon="https://supabase.com/favicon/apple-icon-57x57.png"
-                tag="Supbase(Database hosting)"
+                tag="Supabase(Database hosting)"
                 href="https://supabase.com/"
               />
             </span>
@@ -103,7 +103,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>GitHub Actions</span>
           </li>
         </ul>
-        <h3 className="text-md">Frontend</h3>
+        <h3 className="text-md">프론트엔드</h3>
         <ul>
           <li className="flex gap-x-2">
             <span>Next.js 15</span>
@@ -122,7 +122,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
     >
       <section className={`${styles["features"]}`}>
-        <h2>Main</h2>
+        <h2>메인화면</h2>
         <div className="flex gap-x-8">
           <div className="w-2/6">
             <img src="/images/swing/index.png" />
@@ -134,7 +134,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 <span>채팅 참여자 중복 집계 문제</span>
                 <LinkTag
                   href="https://sumr.it/post/7"
-                  tag="중복 집계를 막기위한 Cache 구조 블로그 포스트"
+                  tag="중복 집계를 막기 위한 Cache 구조 블로그 포스트"
                   favicon="https://sumr.it/favicon.ico"
                 />
               </li>
@@ -160,10 +160,10 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
       </section>
       <br />
       <section className={`${styles["features"]}`}>
-        <h2>New Channel · Sign In · Create Account</h2>
+        <h2>채널 생성 · 로그인 · 회원가입</h2>
         <div className="flex gap-x-8">
           <div className="w-4/6">
-            <h3 className="text-md">New Channel · Create Account</h3>
+            <h3 className="text-md">채널 생성 · 회원가입</h3>
             <ul>
               <li>
                 <span>JPA 기반 구현</span>
@@ -179,7 +179,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 />
               </li>
             </ul>
-            <h3 className="text-md">Sign In</h3>
+            <h3 className="text-md">로그인</h3>
             <ul>
               <li>
                 <span>JWT 기반 인증</span>
@@ -212,7 +212,7 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
     >
       <section className={`${styles["features"]}`}>
-        <h2>Search</h2>
+        <h2>검색기능</h2>
         <div className="flex gap-x-8">
           <div className="w-2/6">
             <img src="/images/swing/search.png" />
@@ -221,12 +221,13 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <h3 className="text-md">채널명 검색</h3>
             <ul>
               <li>
-                <span>LIKE 검색 기능 개선</span>
+                <span>LIKE 검색 기능 테스트</span>
                 <LinkTag
                   href="https://sumr.it/post/9"
                   tag="Jmeter LIKE 검색기능 테스트 블로그 포스트"
                   favicon="https://sumr.it/favicon.ico"
                 />
+                <span>LIKE 검색 기능 개선</span>
                 <LinkTag
                   href="https://sumr.it/post/10"
                   tag="Extension을 활용한 성능개선 블로그 포스트"
@@ -244,10 +245,10 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
       </section>
       <br />
       <section className={`${styles["features"]}`}>
-        <h2>Chat</h2>
+        <h2>채팅</h2>
         <div className="flex gap-x-8">
           <div className="w-4/6">
-            <h3 className="text-md">Chat Channel</h3>
+            <h3 className="text-md">채팅 채널</h3>
             <ul>
               <li>
                 <span>Websocket JWT 인증</span>
@@ -263,12 +264,13 @@ const AblyPortfolio = forwardRef<TemplateRef>((_, ref) => (
                 />
               </li>
               <li>
-                <span>Websocket 메세지 인가 문제</span>
+                <span>Websocket 메시지 인가 문제</span>
                 <LinkTag
                   href="https://sumr.it/post/5"
-                  tag="메세지 인가 문제 및 Caffeine 도입 블로그 포스트"
+                  tag="메시지 인가 문제 및 Caffeine 도입 블로그 포스트"
                   favicon="https://sumr.it/favicon.ico"
                 />
+                <span>Websocket 메시지 인가 해결</span>
                 <LinkTag
                   href="https://sumr.it/post/6"
                   tag="Caffeine을 활용한 인가 문제 해결 블로그 포스트"
