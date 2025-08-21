@@ -47,7 +47,9 @@ const Selector: FunctionComponent = () => {
             <SelectItem value="/aptner/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
           <SelectGroup>
-            <SelectLabel>ABLY(~2025.08.20)</SelectLabel>
+            <SelectLabel>
+              <del style={{ color: "red" }}>ABLY(~2025.08.20)</del>
+            </SelectLabel>
             <SelectItem value="/ably/introduction">자기소개서</SelectItem>
             <SelectItem value="/ably/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
