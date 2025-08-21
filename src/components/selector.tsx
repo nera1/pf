@@ -32,12 +32,9 @@ const Selector: FunctionComponent = () => {
         </SelectTrigger>
         <SelectContent className="w-[220px]">
           <SelectGroup>
-            <SelectLabel>기본</SelectLabel>
-            <SelectItem value="/introduction">자기소개서</SelectItem>
-            <SelectItem value="/portfolio">포트폴리오</SelectItem>
-          </SelectGroup>
-          <SelectGroup>
-            <SelectLabel>더 스윙(~2025.08.30)</SelectLabel>
+            <SelectLabel>
+              <del style={{ color: "black" }}>더 스윙(~2025.08.30)</del>
+            </SelectLabel>
             <SelectItem value="/swing/introduction">자기소개서</SelectItem>
             <SelectItem value="/swing/portfolio">포트폴리오</SelectItem>
           </SelectGroup>

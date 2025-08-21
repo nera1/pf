@@ -4,23 +4,21 @@ import { Button } from "@/components/ui/button";
 
 import { FileDown, Github } from "lucide-react";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import { PortfolioRef } from "./components/document";
 
-import Portfolio from "./pages/portfolio";
-import Career from "./pages/career";
-import Introduction from "./pages/introduction";
 import Selector from "./components/selector";
 
 import SwingPortfolio from "./pages/swing/portfolio";
 
-import styles from "./App.module.scss";
 import SwingIntroduction from "./pages/swing/introduction";
 import AptnerIntroduction from "./pages/aptner/introduction";
 import AptnerPortfolio from "./pages/aptner/portfolio";
 import AblyIntroduction from "./pages/ably/introduction";
 import AblyPortfolio from "./pages/ably/portfolio";
+
+import styles from "./App.module.scss";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -97,12 +95,7 @@ function App() {
         </header>
         <div className={styles["container"]}>
           <Routes>
-            <Route path="/" element={<Introduction reference={childRef} />} />
-            <Route
-              path="/portfolio"
-              element={<Portfolio reference={childRef} />}
-            />
-            <Route path="/career" element={<Career reference={childRef} />} />
+            <Route path="/" element={<Navigate to="/swing/introduction" />} />
             <Route path="/swing">
               <Route
                 path="introduction"
