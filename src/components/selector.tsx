@@ -32,6 +32,11 @@ const Selector: FunctionComponent = () => {
         </SelectTrigger>
         <SelectContent className="w-[220px]">
           <SelectGroup>
+            <SelectLabel>넥스트그라운드(~2025.08.27)</SelectLabel>
+            <SelectItem value="/nextground/introduction">자기소개서</SelectItem>
+            <SelectItem value="/nextground/portfolio">포트폴리오</SelectItem>
+          </SelectGroup>
+          <SelectGroup>
             <SelectLabel>
               <del style={{ color: "black" }}>더 스윙(~2025.08.30)</del>
             </SelectLabel>

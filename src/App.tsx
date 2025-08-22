@@ -19,6 +19,8 @@ import AblyIntroduction from "./pages/ably/introduction";
 import AblyPortfolio from "./pages/ably/portfolio";
 
 import styles from "./App.module.scss";
+import NextgroundIntroduction from "./pages/nextground/introduction";
+import NextgroundPortfolio from "./pages/nextground/portfolio";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -124,6 +126,16 @@ function App() {
               <Route
                 path="portfolio"
                 element={<AblyPortfolio ref={childRef} />}
+              />
+            </Route>
+            <Route path="/nextground">
+              <Route
+                path="introduction"
+                element={<NextgroundIntroduction ref={childRef} />}
+              />
+              <Route
+                path="portfolio"
+                element={<NextgroundPortfolio ref={childRef} />}
               />
             </Route>
           </Routes>

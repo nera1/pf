@@ -1,0 +1,115 @@
+@use "variables" as vars;
+
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  font-weight: normal;
+  src: url("/fonts/SpoqaHanSansNeo.woff2") format("woff2");
+}
+
+.swing-introduction * {
+  font-family: "SpoqaHanSansNeo" !important;
+}
+
+.swing-introduction {
+  box-sizing: border-box;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  .portfolio {
+    li {
+      font-size: 15px !important;
+    }
+    ul {
+      font-size: 15px !important;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+  }
+
+  .features {
+    li {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 15px;
+    }
+  }
+
+  &.swing-portfolio {
+    h2:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  & .project-stack li > span::after {
+    content: ",";
+  }
+
+  & .project-stack li > span:last-child::after {
+    content: "";
+  }
+
+  & .badge {
+    background-color: #000;
+    color: #fff;
+    padding: 0px 6px;
+    border-radius: 3px;
+  }
+
+  & > .info {
+    & ul {
+      gap: 5px;
+      padding-left: 0;
+      & > li {
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+      }
+    }
+  }
+  & > .story {
+    padding-top: 16px;
+    & p {
+      font-size: 15px;
+    }
+  }
+  & > .skills {
+    padding-left: 16px;
+    & ul {
+      font-size: 15px;
+    }
+  }
+
+  & > .career {
+    & ul {
+      padding: 1rem 1em;
+      font-size: 15px;
+    }
+  }
+
+  & > .project {
+    & ul {
+      padding: 1rem 1em;
+      font-size: 15px !important;
+    }
+  }
+
+  & > .others {
+    & ul {
+      padding: 1rem 0;
+      font-size: 15px;
+    }
+
+    & li {
+      display: flex;
+    }
+  }
+}
