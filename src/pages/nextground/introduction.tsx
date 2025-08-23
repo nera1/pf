@@ -30,21 +30,21 @@ export const LinkTag: React.FC<LinkTagProps> = ({ href, tag, favicon }) => (
 const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
-      <section className={`${styles["info"]} flex gap-x-12`}>
+      <section className={`${styles["info"]} flex gap-x-12 mb-10`}>
         <Avatar
-          width={180}
-          height={180}
+          width={160}
+          height={160}
           borderRadius={"12.5%"}
           offsetY={10}
           scale={1.26}
           backgroundColor="#fff"
         />
-        <div className="flex flex-col justify-center gap-y-2">
-          <span className="text-xl font-bold mt-2">엄인용</span>
-          <span className="text-md mt-1 font-medium text-neutral-600">
+        <div className="flex flex-col justify-center gap-y-[5px]">
+          <span className="text-lg font-bold mt-2">엄인용</span>
+          <span className="text-base mt-1 font-medium text-neutral-600">
             백엔드 개발자
           </span>
-          <ul className="pl-0 m-0 mt-1 text-neutral-500">
+          <ul className="pl-0 m-0 mt-1 text-neutral-500 text-sm">
             <li>
               Blog.
               <LinkTag
@@ -71,10 +71,16 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </ul>
         </div>
       </section>
-      <section className={`${styles["story"]}`}>
-        <h2 className="text-lg">소개</h2>
+      <h2 className="!text-2xl">
+        더 나은 답을 찾기 위해
+        <br /> 끊임없이 시도합니다
+      </h2>
+      <section>
+        <h3 className="!text-xl">
+          한번의 정답보다 여러번의 해답을 찾기위해 노력합니다
+        </h3>
+        <h4>Spring Boot Websocket기반 채팅 어플리케이션 </h4>
       </section>
-      <br />
       <section className={styles["motivation-vision"]}>
         <h2 className="text-lg">지원동기</h2>
       </section>
