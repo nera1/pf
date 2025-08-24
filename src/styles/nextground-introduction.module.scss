@@ -82,9 +82,13 @@
     }
   }
   & > .skills {
-    padding-left: 16px;
-    & ul {
-      font-size: 15px;
+    & li {
+      & > span::after {
+        content: " ,";
+      }
+      & > span:last-child::after {
+        content: "";
+      }
     }
   }
 
@@ -95,21 +99,6 @@
     }
   }
 
-  & > .project {
-    & ul {
-      padding: 1rem 1em;
-      font-size: 15px !important;
-    }
-  }
-
   & > .others {
-    & ul {
-      padding: 1rem 0;
-      font-size: 15px;
-    }
-
-    & li {
-      display: flex;
-    }
   }
 }
