@@ -73,167 +73,40 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
       </section>
       <h2 className="!text-2xl">
         더 나은 답을 찾기 위해
-        <br /> 끊임없이 시도합니다
+        <br /> 더 많은 시행착오를 겪습니다
       </h2>
       <section>
-        <h3 className="!text-xl">
-          한번의 정답보다 여러번의 해답을 찾기위해 노력합니다
-        </h3>
-        <h4>Spring Boot Websocket기반 채팅 어플리케이션 </h4>
-      </section>
-      <section className={styles["motivation-vision"]}>
-        <h2 className="text-lg">지원동기</h2>
-      </section>
-    </div>
-    <div className={`${styles["swing-introduction"]} !mb-0 !pb-0`}>
-      <h2>Skills</h2>
-      <section className={styles["skills"]}>
-        <h3 className="text-md">Spring Boot, Spring Security, JPA, JAVA</h3>
-        <ul>
+        <h4 className="!text-lg">
+          채팅 웹 어플리케이션 WebSocket 통신 시 JWT 인증·인가
+        </h4>
+        <ul className="!text-base !gap-y-1">
           <li>
-            Spring Boot, JPA를 활용한 RESTful API를 직접 설계하고 WebSocket을
-            적용한 경험이 있습니다.
+            Websocket Handshake 단계 뿐만 아니라 SUBSCRIBE, SEND 메세지까지 JWT
+            인가 필요
+          </li>
+          <li>Redis가 아닌 Caffeine을 사용하여 인가 정보를 Cache하여 해결</li>
+        </ul>
+        <h4 className="!text-lg">실시간 채팅 참여 인원 중복 집계 문제 해결</h4>
+        <ul className="!text-base !gap-y-1">
+          <li>
+            Cache 구조를 3번이나 재설계 한 끝에 중복 집계를 막는 구조를 발견
           </li>
           <li>
-            Spring Security를 사용해 JWT 기반의 인증 및 인가 기능을 구현할 수
-            있습니다.
+            인원 중복 집계를 막는것은 물론 장기간 접속이 없는 연결을 집계에서
+            제외하는데도 효율적
           </li>
         </ul>
-        <h3 className="text-md">MySQL, MariaDB, PostgreSQL</h3>
-        <ul>
+        <h4 className="!text-lg">채팅 채널명 검색 성능 개선</h4>
+        <ul className="!text-base !gap-y-1">
+          <li>LIKE 부분일치 검색 시 기존의 B-Tree 인덱스는 성능이 좋지 못함</li>
           <li>
-            트랜잭션 처리, 인덱스 설계, 정규화 등을 고려한 테이블을 설계할 수
-            있습니다.
-          </li>
-        </ul>
-        <h3 className="text-md">React, Javascript, Typescript</h3>
-        <ul>
-          <li>
-            Javascript, Typescript의 비동기적 언어의 특성을 이해하고, 간단한
-            프론트엔드 웹 애플리케이션을 직접 개발할 수 있습니다.
-          </li>
-          <li>
-            Backend API 통신 및(AJAX), 프론트엔드의 상태관리를 통해 동적 UI를
-            만들 수 있습니다.
-          </li>
-        </ul>
-      </section>
-      <br />
-      <h2>Career</h2>
-      <section className={styles["career"]}>
-        <h3 className="text-md">주식회사퓨쳐아이씨티(FutureICT)</h3>
-        <div className="flex gap-x-3 !text-[15px]">
-          <span className={styles["badge"]}>2021.12 ~ 2024.03</span>
-        </div>
-        <ul className="!pb-0 !mb-0">
-          <li>
-            AWS 환경에서 운영하는 사내 시스템을 유지·보수하였습니다.
-            <ul>
-              <li>
-                EC2 인스턴스에서 실행되는 Node-RED, InfluxDB, Grafana로 구성된
-                사내 시스템이 실행되는 EC2 인스턴스를 관리하였습니다.
-              </li>
-              <li>
-                Node-RED에 Javascript언어로 MQTT 메세지 파싱 플로우를
-                개발하였습니다.
-              </li>
-            </ul>
-          </li>
-          <li>
-            사내 시스템을 개선하고 편의 기능을 개발하였습니다.
-            <ul>
-              <li>
-                지원이 끝난 장비, 정보가 바뀐 장비의 데이터를 제대로 필터링 하지
-                못하는 문제가 발생
-                <ul>
-                  <li>
-                    PostgreSQL 장비 정보 테이블을 Redis 캐싱하여 약 200대의 LTE
-                    라우터에서 전송하는 센서 데이터를 필터링하는 Node-RED
-                    플로우를 개발하였습니다.
-                  </li>
-                  <li>
-                    장비 정보 추가, 업데이트, 삭제 시 Redis Cache도 함께
-                    변경하도록 Node-RED 플로우를 개선하였습니다.
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            부분검색에 유용한 인덱스와 플러그인들을 테스트하고 도입하여 검색
+            성능을 개선
           </li>
         </ul>
       </section>
     </div>
-    <div className={styles["swing-introduction"]}>
-      <h2>Project</h2>
-      <section className={styles["project"]}>
-        <h3 className="text-md">Madness(실시간 웹소켓 채팅 어플리케이션)</h3>
-        <div className="flex gap-x-3 !text-[15px]">
-          <span className={styles["badge"]}>2025.02 ~ </span>
-          <span>1인 개발</span>
-        </div>
-        <ul>
-          <li>
-            Spring Boot, WebSocket 기반 채팅 어플리케이션 프로젝트 (포트폴리오
-            참조)
-          </li>
-        </ul>
-        <h3 className="text-md">Intarea(인테리어 중개 플랫폼)</h3>
-        <div className="flex gap-x-3 !text-[15px]">
-          <span className={styles["badge"]}>2024.08 ~ 2024.09</span>
-          <span>5인 개발</span>
-        </div>
-        <ul>
-          <li className="flex gap-x-1">
-            Spring Boot, JPA 기반 부트캠프 프로젝트
-            <LinkTag
-              href="https://github.com/ekd594ff/jhta2402_final?tab=readme-ov-file"
-              tag="Intarea Github Respository"
-              favicon="https://github.githubassets.com/favicons/favicon.svg"
-            />
-          </li>
-          <li>
-            프로젝트 팀장으로서 코드 충돌 문제와 연쇄적인 개발 지연 문제를
-            해결하였습니다.
-            <ul>
-              <li>
-                매일 한번 이상의 미팅에서 문제점을 공유하고 팀원과 코드 병합을
-                함께 진행했습니다.
-              </li>
-              <li>
-                개발 일정을 Notion으로 공유하여, 서로의 진행 상황을 파악할 수
-                있게 하였습니다.
-                <ul className="!pl-0">
-                  <li>
-                    <LinkTag
-                      href="https://phase-rail-b25.notion.site/JHTA-2402-1-Final-60254b8037b44088857305189c6eb412"
-                      tag="Intarea 프로젝트 일정관리 Notion"
-                      favicon="https://www.notion.com/front-static/favicon.ico"
-                    />
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <br />
-      <h2>Others</h2>
-      <section className={styles["others"]}>
-        <h3 className="text-md">Certificate</h3>
-        <ul>
-          <li className="flex gap-x-3 !text-[15px]">
-            <span>정보처리기사</span>
-            <span className={styles["badge"]}>2024.09</span>
-          </li>
-        </ul>
-        <h3 className="text-md">Education</h3>
-        <ul>
-          <li className="flex gap-x-3 !text-[15px]">
-            <span>건국대학교 컴퓨터공학과 졸업</span>
-            <span className={styles["badge"]}>2020.02</span>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <div className={styles["swing-introduction"]}></div>
   </Template>
 ));
 
