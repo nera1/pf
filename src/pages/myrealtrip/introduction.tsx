@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 import Template, { TemplateRef } from "@/components/template";
 import Avatar from "@/components/avatar";
-import styles from "@/styles/nextground-introduction.module.scss";
+import styles from "@/styles/myrealtrip-introduction.module.scss";
 
 export interface LinkTagProps {
   href: string;
@@ -48,7 +48,7 @@ export const DividerWithDot: React.FC<DividerWithDotProps> = ({
   );
 };
 
-const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
+const MyrealtripIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
       <section className={`${styles["info"]} flex gap-x-12 mb-10`}>
@@ -148,7 +148,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
     </div>
     <div className={styles["swing-introduction"]}>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>
-        넥스트그라운드 지원
+        마이리얼트립 지원
       </h3>
       <p className="!text-base">
         저는 어떤 플랫폼에서도 기능 제공만큼이나 사용자 커뮤니티를 형성하려는
@@ -163,7 +163,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
         개발자로서 귀중한 가치를 공유하는 경험을 개선하고 발전시키는 데
         기여하고자 넥스트그라운드에 지원하였습니다.
       </p>
-      <DividerWithDot dotColor="#3b5bdb" dotSize="96" />
+      <DividerWithDot dotSize="96" />
       <p className="!text-base">
         기존의 기능을 개선하는 작업은 현재 시스템에 대한 명확한 이해에서
         시작됩니다.
@@ -174,16 +174,15 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
         구조를 이해하는데도 도움이 될 것입니다.
       </p>
       <p className="!text-base">
-        웹 서버를 처음 공부하던 때 CORS 문제로 꼬박 일주일을 매달렸고, 그 경험이
-        문제 해결을 위한 배움과 실행을 주저하지 않는 개발자로 성장하는 계기가
-        되었습니다.
+        웹 개발에 대해 아무것도 알지 못하던 때 HTML, CSS, Javascript를 다룬 책을
+        무작정 따라하고, CORS 문제 때문에 꼬박 일주일을 고민하기도 하며
+        개발자로서의 지구력을 길러왔습니다.
       </p>
       <p className="!text-base">
-        시행착오를 멈추지 않는 개발자로 넥스트그라운드의 목표를 위한 몰입에
-        끝까지 함께하겠습니다.
+        넥스트그라운드의 목표를 위한 몰입에 끝까지 함께하겠습니다.
       </p>
     </div>
   </Template>
 ));
 
-export default NextgroundIntroduction;
+export default MyrealtripIntroduction;

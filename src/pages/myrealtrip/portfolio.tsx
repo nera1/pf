@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import Template, { TemplateRef } from "@/components/template";
-import styles from "@/styles/nextground-introduction.module.scss";
+import styles from "@/styles/myrealtrip-introduction.module.scss";
 
 export interface LinkTagProps {
   href: string;
@@ -26,7 +26,7 @@ export const LinkTag: React.FC<LinkTagProps> = ({ href, tag, favicon }) => (
   </label>
 );
 
-const NextgroundPortfolio = forwardRef<TemplateRef>((_, ref) => (
+const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
@@ -202,4 +202,4 @@ const NextgroundPortfolio = forwardRef<TemplateRef>((_, ref) => (
   </Template>
 ));
 
-export default NextgroundPortfolio;
+export default MyrealtripPortfolio;

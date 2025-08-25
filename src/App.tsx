@@ -21,6 +21,8 @@ import AblyPortfolio from "./pages/ably/portfolio";
 import styles from "./App.module.scss";
 import NextgroundIntroduction from "./pages/nextground/introduction";
 import NextgroundPortfolio from "./pages/nextground/portfolio";
+import MyrealtripIntroduction from "./pages/myrealtrip/introduction";
+import MyrealtripPortfolio from "./pages/myrealtrip/portfolio";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -136,6 +138,16 @@ function App() {
               <Route
                 path="portfolio"
                 element={<NextgroundPortfolio ref={childRef} />}
+              />
+            </Route>
+            <Route path="/myrealtrip">
+              <Route
+                path="introduction"
+                element={<MyrealtripIntroduction ref={childRef} />}
+              />
+              <Route
+                path="portfolio"
+                element={<MyrealtripPortfolio ref={childRef} />}
               />
             </Route>
           </Routes>
