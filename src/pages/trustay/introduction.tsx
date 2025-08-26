@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 import Template, { TemplateRef } from "@/components/template";
 import Avatar from "@/components/avatar";
-import styles from "@/styles/myrealtrip-introduction.module.scss";
+import styles from "@/styles/trustay-introduction.module.scss";
 
 export interface LinkTagProps {
   href: string;
@@ -42,13 +42,13 @@ export const DividerWithDot: React.FC<DividerWithDotProps> = ({
         style={{ color: dotColor, fontSize: dotSize }}
         className={`mx-2 !text-3xl`}
       >
-        ∙
+        •
       </span>
     </div>
   );
 };
 
-const MyrealtripIntroduction = forwardRef<TemplateRef>((_, ref) => (
+const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
       <section className={`${styles["info"]} flex gap-x-12 mb-10`}>
@@ -159,20 +159,26 @@ const MyrealtripIntroduction = forwardRef<TemplateRef>((_, ref) => (
     </div>
     <div className={styles["swing-introduction"]}>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>
-        마이리얼트립 지원
+        트러스테이 지원
       </h3>
       <p className="!text-base">
-        마이리얼트립은 숙박·액티비티·항공·보험 등 여행에 필요한 모든 서비스를
-        제공하는 슈퍼앱입니다. 그중에서도 항공 서비스는 여행 경험의 시작과 끝을
-        결정하는 핵심 요소입니다.
+        노크플레이스의 서비스를 보며 가끔 집 문고리에 걸려있던 책자가
+        떠올랐습니다. 저희 가족은 그 책자를 '상가책'이라 불렀는데 인근의
+        음식점부터 이삿짐센터, 세탁소까지 유용한 정보가 많아 모아두고 필요할
+        때마다 유용하게 사용했던 기억이 있습니다.
       </p>
-      <p className="!text-base">
-        저는 마이리얼트립이 고객 관점의 사고로 고객이 직접 국제선 항공권 일정을
-        변경할 수 있는 시스템까지 만든 점에 주목했습니다. 항공사의 업무로 맡길
-        수도 있는 고객 문제에 끝까지 책임지는 태도에 깊은 인상을 받아 항공
-        백엔드 개발자로 지원하게 되었습니다.
+      <p>
+        노크플레이스는 그 편리함을 오늘의 방식으로 확장한 서비스라고 느꼈습니다.
+        더 뛰어난 접근성과 다양한 기능으로 입주민과 단지 안팎의 업체를
+        연결합니다.
       </p>
-      <DividerWithDot dotColor="#000" dotSize="96" />
+      <p>
+        이러한 연결이 지역 상권에 긍정적인 활력을 불어넣고, 입주민의 생활 반경을
+        넓힌다는 점에 깊은 인상을 받아 백엔드 개발자로서 라이프스타일을
+        향상시키는 노크플레이스 서비스에 기여할 수 있다는 기대감으로
+        트러스테이에 트러스테이에 지원하게 되었습니다.
+      </p>
+      <DividerWithDot dotColor="rgb(98, 127, 234)" dotSize="96" />
       <p className="!text-base">
         첫 직장에서 인수인계 없이 선임들이 이직·퇴사하며 사내 시스템을 혼자 맡게
         됐습니다. 데이터베이스 테이블을 하나하나 확인하며 구조를 파악했고, 그
@@ -197,4 +203,4 @@ const MyrealtripIntroduction = forwardRef<TemplateRef>((_, ref) => (
   </Template>
 ));
 
-export default MyrealtripIntroduction;
+export default TrustayIntroduction;

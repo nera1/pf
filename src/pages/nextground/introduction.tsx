@@ -92,7 +92,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </ul>
         </div>
       </section>
-      <h2 className="!text-2xl !my-12">
+      <h2 className="!text-2xl !my-5">
         더 나은 답을 찾기 위해
         <br /> 더 많은 시행착오를 겪습니다
       </h2>
@@ -102,17 +102,15 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </h4>
         <ul className="!text-base !gap-y-1">
           <li>
-            채팅 채널에 참여한 인원만 메시지 송수신 할 수 있도록 위해 메시지에
-            대한 JWT 인가 필요
+            Caffeine을 활용한 인가 정보 Cache로 WebSocket Handshake 이후의
+            메세지 인가
           </li>
-          <li>Caffeine을 통해 인가 정보를 Cache하여 해결</li>
         </ul>
         <h4 className="!text-lg">실시간 채팅 참여 인원 집계</h4>
         <ul className="!text-base !gap-y-1">
-          <li>Cache 구조를 3번 재설계 한 끝에 중복 집계를 막는 구조를 발견</li>
           <li>
-            인원 중복 집계를 막는것은 물론 장기간 접속이 없는 연결을 집계에서
-            제외하는데도 효율적
+            인원 중복 집계를 막고, 장기간 접속이 없는 연결을 집계에서 제외하도록
+            Cache 구조 재설계
           </li>
         </ul>
         <h4 className="!text-lg">채팅 채널명 검색 기능</h4>
@@ -121,6 +119,22 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
             검색에 유용한 인덱스와 플러그인들을 테스트, 도입하여 검색
             엔드포인트의 응답시간 감소
           </li>
+        </ul>
+      </section>
+      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>경력</h3>
+      <section className={styles["career"]}>
+        <ul className="!text-base">
+          <li className="flex gap-x-2">
+            <span className="font-bold">주식회사퓨쳐아이씨티(FutureICT)</span>
+            <span className={`${styles["badge"]}`}>
+              2021.12 ~ 2024.03 (2년 3개월)
+            </span>
+          </li>
+          <li>
+            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하고, Redis 캐시로
+            MQTT 메시지 Topic을 필터링하는 플로우 구성
+          </li>
+          <li>Grafana를 활용한 InfluxDB 데이터 시각화</li>
         </ul>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>기술 스택</h3>
@@ -138,10 +152,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <section>
         <ul className="!text-base">
           <li className="flex gap-x-2">
-            <span>건국대학교 컴퓨터공학</span>
-          </li>
-          <li className="flex gap-x-2">
-            <span>정보처리기사</span>
+            <span>건국대학교 컴퓨터공학과 졸업</span>
           </li>
         </ul>
       </section>

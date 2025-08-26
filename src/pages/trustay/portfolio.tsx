@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 
 import Template, { TemplateRef } from "@/components/template";
-import styles from "@/styles/nextground-introduction.module.scss";
+import styles from "@/styles/trustay-introduction.module.scss";
 
 export interface LinkTagProps {
   href: string;
@@ -26,7 +26,7 @@ export const LinkTag: React.FC<LinkTagProps> = ({ href, tag, favicon }) => (
   </label>
 );
 
-const NextgroundPortfolio = forwardRef<TemplateRef>((_, ref) => (
+const TrustayPortfolio = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
@@ -113,8 +113,8 @@ const NextgroundPortfolio = forwardRef<TemplateRef>((_, ref) => (
               기능을 이용하지 못함
             </span>
             <span>
-              채널 ID, 유저 ID, 클라이언트 ID를 Record로 묶어 key값으로하는
-              Cache 구조로 변경
+              채널 ID, 유저 ID, 클라이언트 ID를 Record로 묶어 키 값으로하는 캐시
+              구조로 변경
             </span>
             <span>
               중복 집계를 막고, 장시간 연결이 없는 인원을 집계에서 제거하는
@@ -224,4 +224,4 @@ const NextgroundPortfolio = forwardRef<TemplateRef>((_, ref) => (
   </Template>
 ));
 
-export default NextgroundPortfolio;
+export default TrustayPortfolio;

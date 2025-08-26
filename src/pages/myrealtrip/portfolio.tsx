@@ -32,13 +32,13 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
       className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
     >
       <section className={`${styles["portfolio"]}`}>
-        <h2>[실시간 채팅 웹 애플리케이션] Madness</h2>
+        <h2>[웹소켓 기반 실시간 채팅 웹 애플리케이션] Madness</h2>
         <h3 className="flex gap-x-2">
           <span>1인 개발</span>
         </h3>
         <h3 className="flex gap-x-2">
           <span>2025.02 ~</span>
-          <span>개발중</span>
+          <span>개발 중</span>
         </h3>
         <ul>
           <li>
@@ -51,14 +51,14 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
           <li>
             <LinkTag
               href="https://github.com/nera1/api.madness"
-              tag="Madness Backend Github Repository"
+              tag="Madness Backend GitHub Repository"
               favicon="https://github.githubassets.com/favicons/favicon.svg"
             />
           </li>
           <li>
             <LinkTag
               href="https://github.com/nera1/madness"
-              tag="Madness Frontend Github Repository"
+              tag="Madness Frontend GitHub Repository"
               favicon="https://github.githubassets.com/favicons/favicon.svg"
             />
           </li>
@@ -74,7 +74,7 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>
               <LinkTag
                 favicon="https://supabase.com/favicon/apple-icon-57x57.png"
-                tag="Supbase(Database hosting)"
+                tag="Supabase (Database hosting)"
                 href="https://supabase.com/"
               />
             </span>
@@ -84,7 +84,7 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
             <span>
               <LinkTag
                 favicon="https://cloudtype.io/favicon.svg"
-                tag="Cloudtype(Backend hosting)"
+                tag="Cloudtype (Backend hosting)"
                 href="https://cloudtype.io/ko/home"
               />
             </span>
@@ -96,65 +96,32 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
       </section>
       <br />
       <section className={`${styles["features"]}`}>
-        <h3>웹소켓 채팅 JWT 인증·인가</h3>
-        <ul>
-          <li>
-            <span>JWT 인증이 된 사용자의 요청만 WebSocket Handshake 가능</span>
-            <LinkTag
-              href="https://sumr.it/post/3"
-              tag="[블로그] HandshakeInterceptor 에서 JWT 인증을 확인하는 방법"
-              favicon="https://sumr.it/favicon.ico"
-            />
-          </li>
-          <li>
-            WebSocket Handshake가 성공한 이후에도 메시지의 JWT 인증 여부를 검사
-            <LinkTag
-              href="https://sumr.it/post/4"
-              tag="[블로그] ChannelInterceptor 에서 JWT 인증을 확인하는 방법"
-              favicon="https://sumr.it/favicon.ico"
-            />
-          </li>
-          <li>
-            <span>
-              채팅 채널에 참여중인 사람만 SUBSCRIBE, 메시지 PUBLISH(SEND)가
-              가능해야 함
-            </span>
-            <span>
-              Spring Boot 에 Caffeine Cache를 도입하여 인가 문제를 해결
-            </span>
-            <LinkTag
-              href="https://sumr.it/post/5"
-              tag="[블로그] 메시지 인가 문제 및 Redis가 아닌 Caffeine을 도입한 이유"
-              favicon="https://sumr.it/favicon.ico"
-            />
-            <LinkTag
-              href="https://sumr.it/post/6"
-              tag="[블로그] Caffeine Cache을 활용한 인가 문제 해결"
-              favicon="https://sumr.it/favicon.ico"
-            />
-            <LinkTag
-              href="https://github.com/nera1/api.madness/blob/main/src/main/java/kr/mdns/madness/services/ChannelMemberService.java#L18"
-              tag="[코드] 인가 정보를 Cache 하는 ChannelMemberService 코드"
-              favicon="https://github.githubassets.com/favicons/favicon.svg"
-            />
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div
-      className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
-    >
-      <section className={`${styles["features"]}`}>
         <h3>실시간 채팅 참여자 집계</h3>
         <ul>
           <li>
             <span>
-              브라우저 탭을 여러개 열면 실시간 채팅 참여자가 중복으로 집계되는
-              문제 발생
+              브라우저 탭을 여러 개 열면 실시간 채팅 참여자가 중복으로 집계되는
+              문제
             </span>
             <span>
-              비정상적 웹소켓 연결 종료가 참여자 집계에 반영이 안 되는 문제 발생
+              비정상적 웹소켓 연결 종료가 참여자 집계에 반영이 안 되는 문제
             </span>
+          </li>
+          <li>
+            <span>
+              채널 ID를 키 값으로 하는 캐시 구조는 Caffeine의 시간 기반 만료
+              기능을 이용하지 못함
+            </span>
+            <span>
+              채널 ID, 유저 ID, 클라이언트 ID를 Record로 묶어 key값으로하는
+              Cache 구조로 변경
+            </span>
+            <span>
+              중복 집계를 막고, 장시간 연결이 없는 인원을 집계에서 제거하는
+              구조로 개선
+            </span>
+          </li>
+          <li>
             <LinkTag
               href="https://sumr.it/post/7"
               tag="[블로그] 실시간 채팅 참여자 집계를 위한 Caffeine Cache 구조 개선 과정"
@@ -167,32 +134,87 @@ const MyrealtripPortfolio = forwardRef<TemplateRef>((_, ref) => (
             />
           </li>
         </ul>
-        <h3>채팅 채널명 LIKE 검색 기능</h3>
+      </section>
+    </div>
+    <div
+      className={`${styles["swing-introduction"]} ${styles["swing-portfolio"]}`}
+    >
+      <section className={`${styles["features"]}`}>
+        <h3>웹소켓 채팅 JWT 인증·인가</h3>
         <ul>
           <li>
-            <span>
-              %KEYWORD% 형태의 검색은 기존의 B-Tree 인덱스를 제대로 이용하지
-              못하는 문제 발생
-            </span>
+            <span>WebSocket Handshake 시작 시 JWT 인증</span>
             <LinkTag
-              href="https://sumr.it/post/9"
-              tag="[블로그] Jmeter를 활용한 인덱스 적용 전후 LIKE 검색 성능비교"
+              href="https://sumr.it/post/3"
+              tag="[블로그] HandshakeInterceptor JWT 인증"
+              favicon="https://sumr.it/favicon.ico"
+            />
+          </li>
+          <li>
+            <span>WebSocket Handshake 성공 이후 메시지의 JWT 인증</span>
+            <LinkTag
+              href="https://sumr.it/post/4"
+              tag="[블로그] ChannelInterceptor JWT 인증"
               favicon="https://sumr.it/favicon.ico"
             />
           </li>
           <li>
             <span>
-              LIKE 부분검색에 적합한 GIN 인덱스 및 Extension 도입으로 응답시간을
-              줄임
+              채팅 채널에 참여 중인 사람만 SUBSCRIBE, 메시지 SEND 가능하도록
+              인가가 필요
+            </span>
+            <span>
+              단일 컨테이너 환경을 고려하여 Redis 대신 Caffeine 캐시를 도입
+            </span>
+            <LinkTag
+              href="https://sumr.it/post/5"
+              tag="[블로그] 메시지 인가 문제 및 Redis가 아닌 Caffeine을 도입한 이유"
+              favicon="https://sumr.it/favicon.ico"
+            />
+          </li>
+          <li>
+            <span>
+              데이터베이스에서 인가 정보를 캐시하여 웹소켓 메시지의 인가 문제
+              해결
+            </span>
+            <LinkTag
+              href="https://sumr.it/post/6"
+              tag="[블로그] Caffeine 캐시를 활용한 인가 문제 해결"
+              favicon="https://sumr.it/favicon.ico"
+            />
+            <LinkTag
+              href="https://github.com/nera1/api.madness/blob/main/src/main/java/kr/mdns/madness/services/ChannelMemberService.java#L18"
+              tag="[코드] 인가 정보를 캐시하는 ChannelMemberService 코드"
+              favicon="https://github.githubassets.com/favicons/favicon.svg"
+            />
+          </li>
+        </ul>
+        <h3>채팅 채널명 LIKE 검색 기능</h3>
+        <ul>
+          <li>
+            <span>
+              %KEYWORD% 형태의 검색은 기존의 B-Tree 인덱스를 제대로 이용하지
+              못하는 문제
+            </span>
+            <LinkTag
+              href="https://sumr.it/post/9"
+              tag="[블로그] JMeter를 활용한 인덱스 적용 전후 LIKE 검색 성능 비교"
+              favicon="https://sumr.it/favicon.ico"
+            />
+          </li>
+          <li>
+            <span>
+              LIKE 부분 검색에 적합한 GIN 인덱스 및 Extension 도입으로 응답
+              시간을 개선
             </span>
             <LinkTag
               href="https://sumr.it/post/10"
-              tag="[블로그] PostgreSQL Extension및 GIN 인덱스를 활용한 LIKE 검색 성능개선 과정"
+              tag="[블로그] PostgreSQL Extension및 GIN 인덱스를 활용한 LIKE 검색 성능 개선 과정"
               favicon="https://sumr.it/favicon.ico"
             />
             <LinkTag
               href="https://github.com/nera1/api.madness/blob/main/src/main/java/kr/mdns/madness/repository/ChannelRepository.java#L19"
-              tag="[코드] 채녈명을 검색하는 ChannelRepository 의 search 메서드"
+              tag="[코드] 채널명을 검색하는 ChannelRepository의 search 메서드"
               favicon="https://github.githubassets.com/favicons/favicon.svg"
             />
           </li>
