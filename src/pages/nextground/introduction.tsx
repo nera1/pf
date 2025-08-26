@@ -98,26 +98,26 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
       </h2>
       <section>
         <h4 className="!text-lg">
-          채팅 웹 어플리케이션 WebSocket 통신 시 JWT 인증·인가
+          채팅 웹 애플리케이션 WebSocket 통신 시 JWT 인증·인가
         </h4>
         <ul className="!text-base !gap-y-1">
           <li>
-            Caffeine을 활용한 인가 정보 Cache로 WebSocket Handshake 이후의
-            메세지 인가
+            Caffeine을 활용한 인가 정보 캐시로 WebSocket Handshake 이후의 메시지
+            인가
           </li>
         </ul>
         <h4 className="!text-lg">실시간 채팅 참여 인원 집계</h4>
         <ul className="!text-base !gap-y-1">
           <li>
             인원 중복 집계를 막고, 장기간 접속이 없는 연결을 집계에서 제외하도록
-            Cache 구조 재설계
+            캐시 구조 재설계
           </li>
         </ul>
         <h4 className="!text-lg">채팅 채널명 검색 기능</h4>
         <ul className="!text-base !gap-y-1">
           <li>
             검색에 유용한 인덱스와 플러그인들을 테스트, 도입하여 검색
-            엔드포인트의 응답시간 감소
+            엔드포인트의 응답 시간 감소
           </li>
         </ul>
       </section>
@@ -125,7 +125,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <section className={styles["career"]}>
         <ul className="!text-base">
           <li className="flex gap-x-2">
-            <span className="font-bold">주식회사퓨쳐아이씨티(FutureICT)</span>
+            <span className="font-bold">주식회사 퓨쳐아이씨티(FutureICT)</span>
             <span className={`${styles["badge"]}`}>
               2021.12 ~ 2024.03 (2년 3개월)
             </span>
@@ -143,7 +143,7 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
           <li className="flex gap-2">
             <span>Spring Boot</span>
             <span>JPA</span>
-            <span>JAVA</span>
+            <span>Java</span>
             <span>PostgreSQL</span>
           </li>
         </ul>
@@ -162,27 +162,29 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
         넥스트그라운드 지원
       </h3>
       <p className="!text-base">
-        저는 어떤 플랫폼에서도 기능 제공만큼이나 사용자 커뮤니티를 형성하려는
-        노력이 중요하다고 생각합니다.
+        대부분의 부동산 플랫폼은 매물 노출과 선택지 확대에 집중합니다. 반면
+        집품은 주거 경험에 초점을 맞춥니다. 아파트뿐 아니라 빌라·원룸 등 다양한
+        주거 형태에 대해 실거주 여부가 확인된 후기를 제공해, 계약 전에 나에게
+        맞는 집을 판단할 수 있게 돕습니다.
       </p>
       <p className="!text-base">
-        집품의 서비스는 거주 여부를 확인하고, 해당 살아본 사용자만 남길 수 있는
-        차별화된 실거주 후기를 공유하고 있습니다.
+        저는 개발자가 기술적 문제 해결을 넘어 사회적 불편을 줄이는 데 기여하기
+        위해 끊임없이 노력해야 한다고 생각합니다.
       </p>
       <p className="!text-base">
-        사용자 간 실거주경험을 제공하는 집품의 서비스에 매력을 느껴, 백엔드
-        개발자로서 귀중한 가치를 공유하는 경험을 개선하고 발전시키는 데
-        기여하고자 넥스트그라운드에 지원하였습니다.
+        너무나 중요하지만 누구도 쉽게 풀지 못했던 부동산 정보의 비대칭을 기술로
+        해소하려는 넥스트그라운드의 노력에 공감하며, 넥스트그라운드의 문제
+        해결을 위한 치열한 도전에 함께하고자 백엔드 개발자로 지원하였습니다.
       </p>
       <DividerWithDot dotColor="#3b5bdb" dotSize="96" />
       <p className="!text-base">
-        기존의 기능을 개선하는 작업은 현재 시스템에 대한 명확한 이해에서
+        기존의 기능과 구조를 개선하는 작업은 현재 시스템에 대한 명확한 이해에서
         시작됩니다.
       </p>
       <p className="!text-base">
-        인수인계 없이 직접 데이터베이스의 테이블을 하나 하나 확인하고, 쌓이는
-        데이터를 통해 시스템을 파악했던 첫 직장에서의 경험은 집품 서비스의
-        구조를 이해하는데도 도움이 될 것입니다.
+        인수인계 없이 직접 데이터베이스의 테이블을 하나하나 확인하고, 쌓이는
+        데이터를 통해 시스템을 파악했던 첫 직장에서의 경험은 처음 접한 집품
+        서비스를 이해하는 데 큰 도움이 될 것입니다.
       </p>
       <p className="!text-base">
         웹 서버를 처음 공부하던 때 CORS 문제로 꼬박 일주일을 매달렸고, 그 경험이
@@ -190,8 +192,8 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
         되었습니다.
       </p>
       <p className="!text-base">
-        시행착오를 멈추지 않는 개발자로 넥스트그라운드의 목표를 위한 몰입에
-        끝까지 함께하겠습니다.
+        더 나은 서비스를 위한 시행착오를 멈추지 않는 개발자로 넥스트그라운드의
+        목표를 위한 몰입에 끝까지 함께하겠습니다.
       </p>
     </div>
   </Template>
