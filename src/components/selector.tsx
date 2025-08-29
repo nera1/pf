@@ -32,24 +32,14 @@ const Selector: FunctionComponent = () => {
         </SelectTrigger>
         <SelectContent className="w-[220px]">
           <SelectGroup>
-            <SelectLabel>Trustay(~2025.08.31)</SelectLabel>
-            <SelectItem value="/trustay/introduction">자기소개서</SelectItem>
-            <SelectItem value="/trustay/portfolio">포트폴리오</SelectItem>
-          </SelectGroup>
-          <SelectGroup>
-            <SelectLabel>MyRealTrip(~2025.08.31)</SelectLabel>
-            <SelectItem value="/myrealtrip/introduction">자기소개서</SelectItem>
-            <SelectItem value="/myrealtrip/portfolio">포트폴리오</SelectItem>
-          </SelectGroup>
-          <SelectGroup>
-            <SelectLabel>넥스트그라운드(~2025.08.27)</SelectLabel>
-            <SelectItem value="/nextground/introduction">자기소개서</SelectItem>
-            <SelectItem value="/nextground/portfolio">포트폴리오</SelectItem>
-          </SelectGroup>
-          <SelectGroup>
             <SelectLabel>아파트너(~2025.08.31)</SelectLabel>
             <SelectItem value="/aptner/introduction">자기소개서</SelectItem>
             <SelectItem value="/aptner/portfolio">포트폴리오</SelectItem>
+          </SelectGroup>
+          <SelectGroup>
+            <SelectLabel>포스타입(~2025.08.31)</SelectLabel>
+            <SelectItem value="/postype/introduction">자기소개서</SelectItem>
+            <SelectItem value="/postype/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
           <SelectGroup>
             <SelectLabel>
@@ -58,13 +48,33 @@ const Selector: FunctionComponent = () => {
             <SelectItem value="/swing/introduction">자기소개서</SelectItem>
             <SelectItem value="/swing/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
-
           <SelectGroup>
             <SelectLabel>
               <del style={{ color: "red" }}>ABLY(~2025.08.20)</del>
             </SelectLabel>
             <SelectItem value="/ably/introduction">자기소개서</SelectItem>
             <SelectItem value="/ably/portfolio">포트폴리오</SelectItem>
+          </SelectGroup>
+          <SelectGroup>
+            <SelectLabel>
+              <del style={{ color: "red" }}>MyRealTrip(~2025.08.31)</del>
+            </SelectLabel>
+            <SelectItem value="/myrealtrip/introduction">자기소개서</SelectItem>
+            <SelectItem value="/myrealtrip/portfolio">포트폴리오</SelectItem>
+          </SelectGroup>
+          <SelectGroup>
+            <SelectLabel>
+              <del style={{ color: "red" }}>Nextground(~2025.08.31)</del>
+            </SelectLabel>
+            <SelectItem value="/nextground/introduction">자기소개서</SelectItem>
+            <SelectItem value="/nextground/portfolio">포트폴리오</SelectItem>
+          </SelectGroup>
+          <SelectGroup>
+            <SelectLabel>
+              <del style={{ color: "red" }}>Trustay(~2025.08.31)</del>
+            </SelectLabel>
+            <SelectItem value="/trustay/introduction">자기소개서</SelectItem>
+            <SelectItem value="/trustay/portfolio">포트폴리오</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

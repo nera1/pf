@@ -1,14 +1,13 @@
 @use "variables" as vars;
 
 @font-face {
-  font-family: "SpoqaHanSansNeo";
+  font-family: "Pretendard";
   font-weight: normal;
-  src: url("/fonts/SpoqaHanSansNeo.woff2") format("woff2");
+  src: url("/fonts/Pretendard-Medium.ttf") format("truetype");
 }
 
 .swing-introduction * {
-  font-family: "SpoqaHanSansNeo" !important;
-  color: #1c1e21;
+  font-family: "Pretendard" !important;
 }
 
 .swing-introduction {
@@ -19,11 +18,10 @@
   padding-right: 24px;
 
   & a {
-    color: #627fea;
   }
 
   & .primary {
-    color: #627fea;
+    color: #000;
   }
 
   & .portfolio {
@@ -89,7 +87,7 @@
 
   & .badge {
     background-color: transparent;
-    color: #000;
+    color: #3b5bdb;
     padding: 0px 6px;
     border-radius: 3px;
   }

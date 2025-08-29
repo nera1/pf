@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 import Template, { TemplateRef } from "@/components/template";
 import Avatar from "@/components/avatar";
-import styles from "@/styles/trustay-introduction.module.scss";
+import styles from "@/styles/postype-introduction.module.scss";
 
 export interface LinkTagProps {
   href: string;
@@ -48,7 +48,7 @@ export const DividerWithDot: React.FC<DividerWithDotProps> = ({
   );
 };
 
-const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
+const PostypeIntroduction = forwardRef<TemplateRef>((_, ref) => (
   <Template ref={ref}>
     <div className={styles["swing-introduction"]}>
       <section className={`${styles["info"]} flex gap-x-12 mb-10`}>
@@ -75,7 +75,7 @@ const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
               />
             </li>
             <li>
-              GitHub.
+              Github.
               <LinkTag
                 href="https://github.com/nera1"
                 tag="Nera"
@@ -92,36 +92,15 @@ const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
           </ul>
         </div>
       </section>
-      <h2 className="!text-2xl !my-5">
-        더 나은 답을 찾기 위해
-        <br /> 더 많은 시행착오를 겪습니다
-      </h2>
+      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Introduction</h3>
       <section>
-        <h4 className="!text-lg">
-          채팅 웹 애플리케이션 WebSocket 통신 시 JWT 인증·인가
-        </h4>
-        <ul className="!text-base !gap-y-1">
-          <li>
-            Caffeine을 활용한 인가 정보 캐시로 WebSocket Handshake 이후의 메시지
-            인가
-          </li>
-        </ul>
-        <h4 className="!text-lg">실시간 채팅 참여 인원 집계</h4>
-        <ul className="!text-base !gap-y-1">
-          <li>
-            인원 중복 집계를 막고, 장기간 접속이 없는 연결을 집계에서 제외하도록
-            캐시 구조 재설계
-          </li>
-        </ul>
-        <h4 className="!text-lg">채팅 채널명 검색 기능</h4>
-        <ul className="!text-base !gap-y-1">
-          <li>
-            검색에 유용한 인덱스와 플러그인들을 테스트, 도입하여 검색
-            엔드포인트의 응답시간 감소
-          </li>
-        </ul>
+        <p className="!text-base">코드 다양한 문제점과 고민과 해결 과정을</p>
+        <p className="!text-base">
+          배움과 개선이 이어지는 과정 속에서 더 나은 코드를 만들어 가고
+          있습니다.
+        </p>
       </section>
-      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>경력</h3>
+      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Experience</h3>
       <section className={styles["career"]}>
         <ul className="!text-base">
           <li className="flex gap-x-2">
@@ -131,13 +110,15 @@ const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
             </span>
           </li>
           <li>
-            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하고, Redis 캐시로
-            MQTT 메시지 Topic을 필터링하는 플로우 구성
+            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하는 플로우 구성
           </li>
-          <li>InfluxDB의 데이터를 Grafana로 시각화</li>
+          <li>
+            PostgreSQL의 장비정보를 Redis 캐시하여 MQTT 메시지 Topic을
+            필터링하는 Node-RED 플로우 구성
+          </li>
         </ul>
       </section>
-      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>기술 스택</h3>
+      <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Project</h3>
       <section className={styles["skills"]}>
         <ul className="!text-base">
           <li className="flex gap-2">
@@ -159,47 +140,44 @@ const TrustayIntroduction = forwardRef<TemplateRef>((_, ref) => (
     </div>
     <div className={styles["swing-introduction"]}>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>
-        트러스테이 지원
+        넥스트그라운드 지원
       </h3>
       <p className="!text-base">
-        노크플레이스의 서비스를 보며 가끔 집 문고리에 걸려 있던 책자가
-        떠올랐습니다. 저희 가족은 그 책자를 '상가책'이라 불렀는데 인근의
-        음식점부터 이삿짐센터, 세탁소까지 유용한 정보가 많아 모아 두고 필요할
-        때마다 유용하게 사용했던 기억이 있습니다.
-      </p>
-      <p>
-        노크플레이스는 그 편리함을 오늘의 방식으로 확장한 서비스라고 느꼈습니다.
-        더 뛰어난 접근성과 다양한 기능으로 입주민과 단지 안팎의 업체를
-        연결합니다.
-      </p>
-      <p>
-        저는 개발자가 기술적 문제 해결을 넘어 사회에 긍정적 변화를 만들어야
-        한다고 믿습니다. 가게와 사람을 연결하고 지역 상권에 활력을 불어넣는
-        노크플레이스의 방향성은 제 가치관과 맞닿아 있습니다. 기술로
-        라이프스타일을 개선하는 트러스테이의 목표에 기여하고자 백엔드 개발자로
-        지원했습니다.
-      </p>
-      <DividerWithDot dotColor="#627fea" dotSize="96" />
-      <p className="!text-base">
-        성장하는 서비스는 문제 해결을 위해 끊임없이 고민하며, 그 출발점은
-        서비스에 대한 정확한 이해에 있습니다.
+        대부분의 부동산 플랫폼은 매물 노출과 선택지 확대에 집중합니다. 반면
+        집품은 주거 경험에 초점을 맞춥니다. 아파트뿐 아니라 빌라·원룸 등 다양한
+        주거 형태에 대해 실거주 여부가 확인된 후기를 제공해, 계약 전에 나에게
+        맞는 집을 판단할 수 있게 돕습니다.
       </p>
       <p className="!text-base">
-        첫 직장에서 선임자들의 이직·퇴사로 인수인계를 받지 못한 상황에서 DB
-        테이블 구조와 실제 데이터를 하나씩 확인해 시스템을 파악했고, 결국
-        시스템을 유지보수할 수 있게 되었습니다.
+        저는 개발자가 기술적 문제 해결을 넘어 사회적 불편을 줄이는 데 기여하기
+        위해 끊임없이 노력해야 한다고 생각합니다.
       </p>
       <p className="!text-base">
-        처음 본 시스템을 이해하려 했던 제 노력은 노크플레이스의 시스템을
-        파악하고 주도적으로 개선하는 데 도움이 될 것입니다.
+        너무나 중요하지만 누구도 쉽게 풀지 못했던 부동산 정보의 비대칭을 기술로
+        해소하려는 넥스트그라운드의 노력에 공감하며, 넥스트그라운드의 문제
+        해결을 위한 치열한 도전에 함께하고자 백엔드 개발자로 지원하였습니다.
+      </p>
+      <DividerWithDot dotColor="#3b5bdb" dotSize="96" />
+      <p className="!text-base">
+        기존의 기능과 구조를 개선하는 작업은 현재 시스템에 대한 명확한 이해에서
+        시작됩니다.
       </p>
       <p className="!text-base">
-        웹 애플리케이션을 만들기 위해 백엔드와 프론트엔드를 가리지 않고 필요한
-        기술을 익히고 적용하며 성장해 왔듯이, 서비스 개선을 위한 어떤 시행착오도
-        두려워하지 않고 트러스테이와 함께 성장하고자 합니다.
+        인수인계 없이 직접 데이터베이스의 테이블을 하나하나 확인하고, 쌓이는
+        데이터를 통해 시스템을 파악했던 첫 직장에서의 경험은 처음 접한 집품
+        서비스를 이해하는 데 큰 도움이 될 것입니다.
+      </p>
+      <p className="!text-base">
+        웹 서버를 처음 공부하던 때 CORS 문제로 꼬박 일주일을 매달렸고, 그 경험이
+        문제 해결을 위한 배움과 실행을 주저하지 않는 개발자로 성장하는 계기가
+        되었습니다.
+      </p>
+      <p className="!text-base">
+        더 나은 서비스를 위한 시행착오를 멈추지 않는 개발자로 넥스트그라운드의
+        목표를 위한 몰입에 끝까지 함께하겠습니다.
       </p>
     </div>
   </Template>
 ));
 
-export default TrustayIntroduction;
+export default PostypeIntroduction;

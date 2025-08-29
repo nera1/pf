@@ -25,6 +25,8 @@ import MyrealtripIntroduction from "./pages/myrealtrip/introduction";
 import MyrealtripPortfolio from "./pages/myrealtrip/portfolio";
 import TrustayIntroduction from "./pages/trustay/introduction";
 import TrustayPortfolio from "./pages/trustay/portfolio";
+import PostypeIntroduction from "./pages/postype/introduction";
+import PostypePortfolio from "./pages/postype/portfolio";
 
 type AppState = {
   isScrollingUp: boolean;
@@ -101,10 +103,7 @@ function App() {
         </header>
         <div className={styles["container"]}>
           <Routes>
-            <Route
-              path="/"
-              element={<Navigate to="/nextground/introduction" />}
-            />
+            <Route path="/" element={<Navigate to="/postype/introduction" />} />
             <Route path="/swing">
               <Route
                 path="introduction"
@@ -163,6 +162,16 @@ function App() {
               <Route
                 path="portfolio"
                 element={<TrustayPortfolio ref={childRef} />}
+              />
+            </Route>
+            <Route path="/postype">
+              <Route
+                path="introduction"
+                element={<PostypeIntroduction ref={childRef} />}
+              />
+              <Route
+                path="portfolio"
+                element={<PostypePortfolio ref={childRef} />}
               />
             </Route>
           </Routes>

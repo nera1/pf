@@ -131,10 +131,12 @@ const NextgroundIntroduction = forwardRef<TemplateRef>((_, ref) => (
             </span>
           </li>
           <li>
-            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하고, Redis 캐시로
-            MQTT 메시지 Topic을 필터링하는 플로우 구성
+            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하는 플로우 구성
           </li>
-          <li>Grafana를 활용한 InfluxDB 데이터 시각화</li>
+          <li>
+            PostgreSQL의 장비정보를 Redis 캐시하여 MQTT 메시지 Topic을
+            필터링하는 Node-RED 플로우 구성
+          </li>
         </ul>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>기술 스택</h3>
