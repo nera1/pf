@@ -93,15 +93,18 @@ const PostypeIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </div>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Introduction</h3>
-      <section>
-        <p className="!text-base">코드 다양한 문제점과 고민과 해결 과정을</p>
-        <p className="!text-base">
-          배움과 개선이 이어지는 과정 속에서 더 나은 코드를 만들어 가고
-          있습니다.
+      <section className={`${styles["introduction"]}`}>
+        <p className="!text-base !mb-1">
+          시행착오 속에서 더 나은 해결책을 찾아가는 과정을 즐기는 백엔드
+          개발자입니다.
+        </p>
+        <p>
+          문제가 발생한 부분의 구조를 깊이 이해한 후, 그에 맞는 해결 방법을
+          도출합니다
         </p>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Experience</h3>
-      <section className={styles["career"]}>
+      <section className={styles["experience"]}>
         <ul className="!text-base">
           <li className="flex gap-x-2">
             <span className="font-bold">주식회사 퓨쳐아이씨티(FutureICT)</span>
@@ -109,22 +112,33 @@ const PostypeIntroduction = forwardRef<TemplateRef>((_, ref) => (
               2021.12 ~ 2024.03 (2년 3개월)
             </span>
           </li>
+          <li>Node-RED, Javascript, Grafana</li>
           <li>
-            Node-RED로 MQTT 메시지를 파싱, InfluxDB에 저장하는 플로우 구성
+            PostgreSQL 데이터 변경 후 Redis 캐시를 통한 Node-RED의 MQTT 메세지
+            필터링이 제대로 되지 않는 이슈
+            <ul className="!text-base">
+              <li>
+                Node-RED가 PostgreSQL과 Redis를 비동기 처리 시, DB 커밋이
+                확정되기 전에 캐시가 갱신되는 경우가 간헐적으로 발생함을 확인
+              </li>
+              <li>
+                DB 커밋 성공 확인 후에만 Redis 캐시를 업데이트하도록 플로우 수정
+              </li>
+            </ul>
           </li>
-          <li>
-            PostgreSQL의 장비정보를 Redis 캐시하여 MQTT 메시지 Topic을
-            필터링하는 Node-RED 플로우 구성
+          <li className="!text-base">InfluxDB 데이터 Grafana 시각화</li>
+          <li className="!text-base">
+            Grafana 패널에 장비정보 리스트, 검색 및 수정이 가능한 UI 제작
           </li>
         </ul>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Project</h3>
-      <section className={styles["skills"]}>
+      <section className={styles["project"]}>
         <ul className="!text-base">
           <li className="flex gap-2">
             <span>Spring Boot</span>
-            <span>JPA</span>
             <span>Java</span>
+            <span>JPA</span>
             <span>PostgreSQL</span>
           </li>
         </ul>

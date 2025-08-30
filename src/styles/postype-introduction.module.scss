@@ -17,6 +17,10 @@
   padding-left: 24px;
   padding-right: 24px;
 
+  li {
+    list-style-type: disc !important;
+  }
+
   & a {
   }
 
@@ -33,8 +37,36 @@
 
     ul {
       font-size: medium;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+    }
+  }
+
+  & > .experience {
+    & ul {
+      gap: 6px;
+      & ul {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        gap: 6px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  & > .project {
+    & ul {
+      gap: 6px;
+      & ul {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        gap: 6px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  & > .introduction {
+    & ul {
+      gap: 6px;
     }
   }
 
