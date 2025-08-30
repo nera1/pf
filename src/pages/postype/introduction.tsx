@@ -100,7 +100,7 @@ const PostypeIntroduction = forwardRef<TemplateRef>((_, ref) => (
         </p>
         <p>
           문제가 발생한 부분의 구조를 깊이 이해한 후, 그에 맞는 해결 방법을
-          도출합니다
+          도출합니다.
         </p>
       </section>
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Experience</h3>
@@ -135,11 +135,29 @@ const PostypeIntroduction = forwardRef<TemplateRef>((_, ref) => (
       <h3 className={`${styles["primary"]} !text-xl !mt-11`}>Project</h3>
       <section className={styles["project"]}>
         <ul className="!text-base">
-          <li className="flex gap-2">
-            <span>Spring Boot</span>
-            <span>Java</span>
-            <span>JPA</span>
-            <span>PostgreSQL</span>
+          <li className="flex gap-x-2">
+            <span className="font-bold">
+              WebSocket 기반 실시간 채팅 웹 어플리케이션(Madness)
+            </span>
+            <span className={`${styles["badge"]}`}>2025.02 ~</span>
+          </li>
+          <li>Spring Boot, Java, WebSocket, JPA, PostgreSQL</li>
+          <li>
+            PostgreSQL 데이터 변경 후 Redis 캐시를 통한 Node-RED의 MQTT 메세지
+            필터링이 제대로 되지 않는 이슈
+            <ul className="!text-base">
+              <li>
+                Node-RED가 PostgreSQL과 Redis를 비동기 처리 시, DB 커밋이
+                확정되기 전에 캐시가 갱신되는 경우가 간헐적으로 발생함을 확인
+              </li>
+              <li>
+                DB 커밋 성공 확인 후에만 Redis 캐시를 업데이트하도록 플로우 수정
+              </li>
+            </ul>
+          </li>
+          <li className="!text-base">InfluxDB 데이터 Grafana 시각화</li>
+          <li className="!text-base">
+            Grafana 패널에 장비정보 리스트, 검색 및 수정이 가능한 UI 제작
           </li>
         </ul>
       </section>
